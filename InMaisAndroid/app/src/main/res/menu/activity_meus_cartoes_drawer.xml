@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_marketplace"
+            android:icon="@drawable/cart"
+            android:title="Loja" />
+        <item
+            android:id="@+id/nav_termos_de_uso"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Termos de Uso"/>
+
+    </group>
+
+
+    <item android:title="Ajustes Gerais">
+        <menu>
+            <item
+                android:id="@+id/nav_trocar_email_portador"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="@string/action_settings_trocar_email_portador" />
+            <item
+                android:id="@+id/nav_trocar_senha"
+                android:icon="@android:drawable/ic_partial_secure"
+                android:title="@string/action_settings_trocar_senha_login" />
+        </menu>
+    </item>
+
+    <item android:title="Fale Conosco">
+        <menu>
+            <item
+                android:id="@+id/nav_call_sac"
+                android:icon="@android:drawable/ic_menu_call"
+                android:title="SAC - (32) 3229-4950" />
+            <item
+                android:id="@+id/nav_call_ouvidoria"
+                android:icon="@android:drawable/ic_menu_call"
+                android:title="SAC - (32) 0800 285 9632 " />
+            <item
+                android:id="@+id/nav_email_fale_conosco"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Email" />
+        </menu>
+    </item>
+
+
+
+    <item android:title="">
+        <menu>
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_menu_revert"
+            android:title="@string/action_settings_logout" />
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="itspay.br.com.itspay">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.intent.action.CALL_PRIVILEGED" />
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="itspay.br.com.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="itspay.br.com.activity.CadastroLoginActivity"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TermosDeUsoActivity"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TermosDeUsoCartaoVirtualActivity"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.MeusCartoesActivity"
+            android:label="@string/title_activity_meus_cartoes"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TrocarEmailActivity"
+            android:label="Trocar Email"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TrocarSenhaActivity"
+            android:label="Trocar Senha"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.CartaoActivity"
+            android:label="@string/title_activity_cartao"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TransferirOutroCartaoActivity"
+            android:label="Transferir para outro Cartão"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TransferirContaCorrenteActivity"
+            android:label="Transferir para Conta Corrente"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.InserirCargaActivity"
+            android:label="Gerar Boleto"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.CargaInseridaActivity"
+            android:label="Boleto Gerado"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.CartoesVirtuaisActivity"
+            android:label="Cartões Virtuais"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.NovoCartaoVirtualActivity"
+            android:label="Novo Cartão Virtual"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.AjustesSegurancaCartaoActivity"
+            android:label="Ajustes de Segurança"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TarifasActivity"
+            android:label="Tarifas"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.TrocarSenhaCartaoActivity"
+            android:label="Trocar senha do cartão"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.MarketPlaceActivity"
+            android:label="@string/title_activity_market_place"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="itspay.br.com.activity.PedidoDetalheActivity"
+            android:label="Detalhes do Pedido"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.ProdutoDetalheActivity"
+            android:label="Detalhes do Produto"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.EnderecoActivity"
+            android:label="Endereços"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.FormaEnvioActivity"
+            android:label="Forma de Envio"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.CartoesLojaActivity"
+            android:label="Escolha o Cartão"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.ParcelamentoActivity"
+            android:label="Parcelamento"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.ResumoPedidoActivity"
+            android:label="Resumo"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="itspay.br.com.activity.PagamentoActivity"
+            android:label="Pagamento"
+            android:noHistory="true"
+            android:theme="@style/TemaFormularios"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+    </application>
+
+</manifest>
