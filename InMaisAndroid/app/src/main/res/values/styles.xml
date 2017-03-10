@@ -6,8 +6,8 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#00273f</item>
-        <item name="colorPrimaryDark">#00273f</item>
+        <item name="colorPrimary">#d76e2c</item>
+        <item name="colorPrimaryDark">#d76e2c</item>
         <item name="colorAccent">#ab772d</item>
 
 
@@ -20,8 +20,8 @@
 
     <style name="TemaFormularios" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here.-->
-        <item name="colorPrimary">#00273f</item>
-        <item name="colorPrimaryDark">#00273f</item>
+        <item name="colorPrimary">#d76e2c</item>
+        <item name="colorPrimaryDark">#d76e2c</item>
         <item name="colorAccent">#ab772d</item>
 
         <!--Financial
@@ -32,7 +32,7 @@
     </style>
 
     <style name="IvBackApp">
-       <item name="android:background">@drawable/back_bahamas</item>
+        <item name="android:background">@color/principal_color</item>
 
     </style>
 
@@ -42,13 +42,12 @@
     </style>
 
     <style name="IvAppLogo">
-        <item name="android:src">@mipmap/ic_launcher</item>
-    <!-- <item name="android:src">@mipmap/ic_launch_financial</item>-->
+        <item name="android:src">@mipmap/ic_launch_in_mais</item>
+        <!-- <item name="android:src">@mipmap/ic_launch_financial</item>-->
     </style>
 
 
-
-<!-- ###################### ############################# ####################################-->
+    <!-- ###################### ############################# ####################################-->
 
 
     <style name="TemaFormularios_ITSPAY" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -61,16 +60,16 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-<style name="Divider">
-<item name="android:layout_width">match_parent</item>
-<item name="android:layout_height">1dp</item>
-<item name="android:background">@color/divider_grey</item>
-</style>
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider_grey</item>
+    </style>
 
 
-<!-- STYLES DO FOLDING EXAMPLE -->
+    <!-- STYLES DO FOLDING EXAMPLE -->
     <style name="ContentImageBadgeTitle" parent="AppTheme">
         <item name="android:alpha">0.5</item>
         <item name="android:textColor">@android:color/white</item>
@@ -98,4 +97,6 @@
         <item name="android:textColor">@color/titleBadgeTitle</item>
         <item name="android:textSize">12dp</item>
     </style>
+
+
 </resources>

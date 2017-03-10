@@ -2,7 +2,7 @@
     android:padding="10dp"
     android:shape="rectangle">
 
-    <solid android:color="@color/primary_bahamas"/>
+    <solid android:color="@color/bgContent"/>
 
     <corners
         android:bottomLeftRadius="10dp"

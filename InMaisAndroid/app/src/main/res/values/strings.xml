@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bahamas</string>
+    <string name="app_name">In Mais</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -251,6 +251,7 @@
 
 
     <string name="info_email">creditoecobranca@bahamascard.com.br</string>
+    <string name="title_activity_visao_geral">Visao Geral</string>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
 
