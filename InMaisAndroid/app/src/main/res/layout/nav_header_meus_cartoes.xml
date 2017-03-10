@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/back_bahamas"
+    android:background="@color/principal_color"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -12,24 +12,97 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        style="@style/IvAppLogo"/>
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/account_item_list_photo"
+            android:layout_marginRight="10dp"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:tint="@color/azul_bahamas"
+            android:src="@drawable/ic_user_default"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFEEEEEE"/>
 
-    <TextView
-        android:id="@+id/textView"
+        <TextView
+            android:id="@+id/account_item_list_name"
+            android:textColor="@color/bgContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teste Usuario"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/account_item_list_photo"
+            android:layout_toEndOf="@+id/account_item_list_photo" />
+
+        <TextView
+            android:id="@+id/item_cpf"
+            android:textColor="@color/bgContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="041.289.461-09"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_below="@+id/account_item_list_name"
+            android:layout_toRightOf="@+id/account_item_list_photo"
+            android:layout_toEndOf="@+id/account_item_list_photo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/info_email" />
+        android:gravity="left|center_vertical"
+        android:paddingLeft="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingTop="8dp"
+            android:id="@+id/tv_ownership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bgContent"
+            android:text="Pontos" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/account_item_list_branch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bgContent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="79847" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+        <!--style="@style/IvAppLogo"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+        <!--android:text="@string/app_name"-->
+        <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/info_email" />-->
 
 </LinearLayout>
