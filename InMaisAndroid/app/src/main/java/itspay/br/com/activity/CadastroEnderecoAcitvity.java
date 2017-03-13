@@ -28,30 +28,30 @@ public class CadastroEnderecoAcitvity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Estado
+        mSpEstado = (Spinner) findViewById(R.id.sp_estado);
+
+        List<String> estadosList = new ArrayList<String>();
+
+        for (EnumActivity.EstadosBrasilEnum e : EnumActivity.EstadosBrasilEnum.values()) {
+            estadosList.add(e.toString());
+        }
+
+        ArrayAdapter<String> estadoAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estadosList);
+        estadoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpEstado.setAdapter(estadoAdapter);
+
+
         // Cidade
         mSpCidade = (Spinner) findViewById(R.id.sp_cidade);
 
         List<String> cidadeList = new ArrayList<String>();
         cidadeList.add("Brasília");
-        cidadeList.add("Uberlândia");
-        cidadeList.add("Porto Alegre");
 
         ArrayAdapter<String> cidadeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, cidadeList);
         cidadeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpCidade.setAdapter(cidadeAdapter);
 
-
-        // Estado
-        mSpEstado = (Spinner) findViewById(R.id.sp_estado);
-
-        List<String> estadoList = new ArrayList<String>();
-        estadoList.add("Rio Grande do Sul");
-        estadoList.add("Distrito Federal");
-        estadoList.add("Rio de Janeiro");
-
-        ArrayAdapter<String> estadoAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estadoList);
-        estadoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpEstado.setAdapter(estadoAdapter);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

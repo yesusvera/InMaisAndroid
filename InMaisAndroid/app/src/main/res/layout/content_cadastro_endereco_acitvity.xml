@@ -71,6 +71,17 @@
             tools:layout_editor_absoluteX="8dp"
             android:layout_marginBottom="8dp"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:textSize="14dp"
+            android:textColor="@color/mainTextColor"/>
+
+        <Spinner
+            android:id="@+id/sp_estado"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -84,17 +95,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estado"
-            android:textSize="14dp"
-            android:textColor="@color/mainTextColor"/>
-
-        <Spinner
-            android:id="@+id/sp_estado"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
 
     </LinearLayout>
 </RelativeLayout>
