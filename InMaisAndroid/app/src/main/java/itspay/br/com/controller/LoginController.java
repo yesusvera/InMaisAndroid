@@ -51,7 +51,7 @@ public class LoginController extends BaseActivityController<LoginActivity>{
         fazerLoginPortador.setPlataformVersion("string");
         fazerLoginPortador.setPlatformName("string");
         fazerLoginPortador.setSenha(password);
-        fazerLoginPortador.setSistemaOperacional(2);
+        fazerLoginPortador.setSistemaOperacional(1);
         fazerLoginPortador.setVersaoConhecida("1.0.0");
         fazerLoginPortador.setVersaoInstalada("1.0.0");
 
