@@ -9,84 +9,124 @@
     tools:context="itspay.br.com.activity.CadastroCliente1Activity"
     tools:showIn="@layout/activity_cadastro_cliente1">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/ed_nome"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nome"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/ed_cpf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="CPF"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginBottom="8dp"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
 
-        <EditText
-            android:id="@+id/ed_data_nascimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Data Nascimento"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginBottom="8dp"/>
+                <EditText
+                    android:id="@+id/ed_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nome"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sexo"
-            android:textSize="14dp"
-            android:textColor="@color/mainTextColor"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
 
-        <Spinner
-            android:id="@+id/sp_sexo"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+                <EditText
+                    android:id="@+id/ed_cpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="CPF"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estado Civil"
-            android:textSize="14dp"
-            android:textColor="@color/mainTextColor"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
 
-        <Spinner
-            android:id="@+id/sp_estado_civil"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+                <EditText
+                    android:id="@+id/ed_data_nascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Data Nascimento"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nacionalidade"
-            android:textSize="14dp"
-            android:textColor="@color/mainTextColor"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingTop="10dp"
+                android:text="Sexo"
+                android:textStyle="bold"
+                android:paddingLeft="4dp"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp" />
 
-        <Spinner
-            android:id="@+id/sp_nacionalidade"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            <Spinner
+                android:id="@+id/sp_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:paddingLeft="4dp"
+                android:text="Estado Civil"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp" />
 
+            <Spinner
+                android:id="@+id/sp_estado_civil"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:paddingLeft="4dp"
+                android:text="Nacionalidade"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp" />
 
+            <Spinner
+                android:id="@+id/sp_nacionalidade"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
 
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

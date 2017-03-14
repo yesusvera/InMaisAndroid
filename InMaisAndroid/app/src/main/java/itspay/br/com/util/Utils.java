@@ -15,6 +15,9 @@ import com.dexafree.materialList.card.CardProvider;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Set;
 
@@ -208,5 +211,26 @@ public class Utils {
                 }
             }
         });
+    }
+
+
+    public static String formatDate(String currentDate){
+
+        SimpleDateFormat rs = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date convertedCurrentDate = null;
+
+        try {
+            convertedCurrentDate = rs.parse(currentDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        if(convertedCurrentDate != null){
+            String date=sdf.format(convertedCurrentDate);
+            return date;
+        }else {
+            return "";
+        }
     }
 }

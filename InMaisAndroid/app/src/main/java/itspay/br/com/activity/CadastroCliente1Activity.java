@@ -1,25 +1,28 @@
 package itspay.br.com.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import itspay.br.com.controller.CadastroCliente1Controller;
 import itspay.br.com.itspay.R;
+import itspay.br.com.util.mask.MaskEditTextChangedListener;
 
 public class CadastroCliente1Activity extends AppCompatActivity {
 
     Spinner mSpSexo;
     Spinner mSpEstadoCivil;
     Spinner mSpNacionalidade;
+
+    EditText mEdNome;
+    EditText mEdCpf;
+    EditText mEdDataNascimento;
+
+    private CadastroCliente1Controller cadastrClienteController = new CadastroCliente1Controller(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,56 +31,82 @@ public class CadastroCliente1Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Sexo
-        mSpSexo = (Spinner) findViewById(R.id.sp_sexo);
+        initView();
 
-        List<String> sexoList = new ArrayList<String>();
-        sexoList.add("Masculino");
-        sexoList.add("Feminino");
-        sexoList.add("Outros");
+        mEdCpf.addTextChangedListener(new MaskEditTextChangedListener("###.###.###-##", mEdCpf));
+        mEdDataNascimento.addTextChangedListener(new MaskEditTextChangedListener("##/##/####", mEdDataNascimento));
 
-        ArrayAdapter<String> sexoAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, sexoList);
-        sexoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpSexo.setAdapter(sexoAdapter);
+        cadastrClienteController.initDataComponent();
 
-
-        //Estado Civil
-        mSpEstadoCivil = (Spinner) findViewById(R.id.sp_estado_civil);
-
-        List<String> estadoCivilList = new ArrayList<String>();
-        estadoCivilList.add("Solteiro(a)");
-        estadoCivilList.add("Casado(a)");
-        estadoCivilList.add("Divorciado(a)");
-        estadoCivilList.add("Viúvo(a)");
-        estadoCivilList.add("Separado(a)");
-        estadoCivilList.add("Companheiro(a)");
-
-        ArrayAdapter<String> estadoCivilAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, estadoCivilList);
-        estadoCivilAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpEstadoCivil.setAdapter(estadoCivilAdapter);
-
-
-        //Nacionalidade
-        mSpNacionalidade = (Spinner) findViewById(R.id.sp_nacionalidade);
-
-        List<String> nacionalidadeList = new ArrayList<String>();
-        nacionalidadeList.add("Argentino");
-        nacionalidadeList.add("Brasileiro");
-        nacionalidadeList.add("Peruano");
-
-        ArrayAdapter<String> nacionalidadeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, nacionalidadeList);
-        nacionalidadeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpNacionalidade.setAdapter(nacionalidadeAdapter);
-
+        cadastrClienteController.initDataComponent();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getApplicationContext(), CadastroEnderecoAcitvity.class);
-                startActivity(intent);
+                cadastrClienteController.isNextPage();
             }
         });
     }
 
+    private void initView(){
+//        EditText
+        mEdNome =(EditText)findViewById(R.id.ed_nome);
+        mEdCpf =(EditText)findViewById(R.id.ed_cpf);
+        mEdNome =(EditText)findViewById(R.id.ed_nome);
+        mEdDataNascimento= (EditText)findViewById(R.id.ed_data_nascimento);
+
+//        Spinner
+        mSpSexo = (Spinner) findViewById(R.id.sp_sexo);
+        mSpEstadoCivil = (Spinner) findViewById(R.id.sp_estado_civil);
+        mSpNacionalidade = (Spinner) findViewById(R.id.sp_nacionalidade);
+    }
+
+    public Spinner getmSpSexo() {
+        return mSpSexo;
+    }
+
+    public void setmSpSexo(Spinner mSpSexo) {
+        this.mSpSexo = mSpSexo;
+    }
+
+    public Spinner getmSpEstadoCivil() {
+        return mSpEstadoCivil;
+    }
+
+    public void setmSpEstadoCivil(Spinner mSpEstadoCivil) {
+        this.mSpEstadoCivil = mSpEstadoCivil;
+    }
+
+    public Spinner getmSpNacionalidade() {
+        return mSpNacionalidade;
+    }
+
+    public void setmSpNacionalidade(Spinner mSpNacionalidade) {
+        this.mSpNacionalidade = mSpNacionalidade;
+    }
+
+    public EditText getmEdNome() {
+        return mEdNome;
+    }
+
+    public void setmEdNome(EditText mEdNome) {
+        this.mEdNome = mEdNome;
+    }
+
+    public EditText getmEdCpf() {
+        return mEdCpf;
+    }
+
+    public void setmEdCpf(EditText mEdCpf) {
+        this.mEdCpf = mEdCpf;
+    }
+
+    public EditText getmEdDataNascimento() {
+        return mEdDataNascimento;
+    }
+
+    public void setmEdDataNascimento(EditText mEdDataNascimento) {
+        this.mEdDataNascimento = mEdDataNascimento;
+    }
 }

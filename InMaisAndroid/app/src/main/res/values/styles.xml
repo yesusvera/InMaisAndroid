@@ -8,7 +8,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#d76e2c</item>
         <item name="colorPrimaryDark">#d76e2c</item>
-        <item name="colorAccent">#ab772d</item>
+        <item name="colorAccent">#d76e2c</item>
 
 
         <!--Financial
@@ -22,7 +22,7 @@
         <!-- Customize your theme here.-->
         <item name="colorPrimary">#d76e2c</item>
         <item name="colorPrimaryDark">#d76e2c</item>
-        <item name="colorAccent">#ab772d</item>
+        <item name="colorAccent">#d76e2c</item>
 
         <!--Financial
         <item name="colorPrimary">#EF3D3C</item>
