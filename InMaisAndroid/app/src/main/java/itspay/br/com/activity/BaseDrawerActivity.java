@@ -85,8 +85,6 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         mAccountItemListName = (TextView) mDrawerHeader.findViewById(R.id.account_item_list_name);
         mItemCpf = (TextView) mDrawerHeader.findViewById(R.id.item_cpf);
 
-
-
         MaskEditTextChangedListener maskCPF = new MaskEditTextChangedListener("###.###.###-##", mItemCpf);
         mItemCpf.addTextChangedListener(maskCPF);
 

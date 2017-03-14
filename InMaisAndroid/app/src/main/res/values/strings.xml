@@ -74,6 +74,7 @@
     <string name="action_trocar_email">Trocar Email</string>
     <string name="action_trocar_senha">Trocar Senha</string>
     <string name="error_invalid_email">Este endereço de email é inválido.</string>
+    <string name="error_invalid_nome">Digite o nome.</string>
     <string name="error_data_nascimento_invalida">Data de nascimento inválida.</string>
     <string name="error_invalid_cpf">Este cpf é inválido</string>
     <string name="error_invalid_password">Digite a senha</string>
