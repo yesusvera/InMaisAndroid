@@ -16,8 +16,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.controller.BaseController;
 import itspay.br.com.itspay.R;
+import itspay.br.com.util.mask.MaskEditTextChangedListener;
 
 /**
  * Created by juniorbraga on 13/03/17.
@@ -84,9 +86,14 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         mItemCpf = (TextView) mDrawerHeader.findViewById(R.id.item_cpf);
 
 
+
+        MaskEditTextChangedListener maskCPF = new MaskEditTextChangedListener("###.###.###-##", mItemCpf);
+        mItemCpf.addTextChangedListener(maskCPF);
+
         mTvPoints.setText("100.800");
-        mAccountItemListName.setText("Paulo Braga");
-        mItemCpf.setText("047.424.621-30");
+        mAccountItemListName.setText("Rodrigo Palmeira");
+        mItemCpf.setText(IdentityItsPay.getInstance().getLoginPortador().getCpf());
+
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

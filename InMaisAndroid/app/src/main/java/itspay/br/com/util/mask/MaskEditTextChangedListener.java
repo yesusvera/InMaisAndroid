@@ -3,6 +3,7 @@ package itspay.br.com.util.mask;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -15,15 +16,26 @@ public class MaskEditTextChangedListener implements TextWatcher{
 
     private String mMask;
     private EditText mEditText;
+    private TextView mTextView;
     private Set<String> symbolMask = new HashSet<String>();
     private boolean isUpdating;
     private String old = "";
+    private boolean mIsTextView;
 
     public MaskEditTextChangedListener(String mask, EditText editText) {
         mMask = mask;
         mEditText = editText;
         initSymbolMask();
+        mIsTextView = false;
     }
+
+    public MaskEditTextChangedListener(String mask, TextView editText) {
+        mMask = mask;
+        mTextView = editText;
+        initSymbolMask();
+         mIsTextView = true;
+    }
+
 
     private void initSymbolMask(){
         for (int i=0; i < mMask.length(); i++){
@@ -51,8 +63,13 @@ public class MaskEditTextChangedListener implements TextWatcher{
 
         isUpdating = true;
 
-        mEditText.setText(mascara);
-        mEditText.setSelection(mascara.length());
+        if(!mIsTextView) {
+            mEditText.setText(mascara);
+            mEditText.setSelection(mascara.length());
+        }else{
+            mTextView.setText(mascara);
+//            mTextView.setSelection(mascara.length());
+        }
     }
 
     @Override
