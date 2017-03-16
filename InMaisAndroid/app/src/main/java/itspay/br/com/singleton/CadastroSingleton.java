@@ -17,6 +17,8 @@ public class CadastroSingleton {
     private String nacionalidade;
 
 
+
+
     public String getNome() {
         return nome;
     }

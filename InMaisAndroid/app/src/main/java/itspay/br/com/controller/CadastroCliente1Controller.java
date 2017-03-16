@@ -28,9 +28,9 @@ public class CadastroCliente1Controller extends BaseActivityController<CadastroC
         if (isValidateActivity()){
             CadastroSingleton.sharedInstance.setCpf(activity.getmEdCpf().getText().toString().replace(".", "").replace("-",""));
             CadastroSingleton.sharedInstance.setDataDeNascimento(Utils.formatDate(activity.getmEdDataNascimento().toString()));
-            CadastroSingleton.sharedInstance.setEstadoCivil(activity.getmSpEstadoCivil().toString());
-            CadastroSingleton.sharedInstance.setNacionalidade(activity.getmSpNacionalidade().toString());
-            CadastroSingleton.sharedInstance.setSexo(activity.getmSpSexo().toString());
+            CadastroSingleton.sharedInstance.setEstadoCivil(activity.getmSpEstadoCivil().getSelectedItem().toString());
+            CadastroSingleton.sharedInstance.setNacionalidade(activity.getmEdNacionalidade().getText().toString());
+            CadastroSingleton.sharedInstance.setSexo(activity.getmSpSexo().getSelectedItem().toString());
 
             Intent intent = new Intent (activity, CadastroEnderecoAcitvity.class);
             activity.startActivity(intent);
@@ -44,11 +44,10 @@ public class CadastroCliente1Controller extends BaseActivityController<CadastroC
         boolean cpf = false;
         boolean dataDeAniverssário = false;
 
-        if(activity.getmEdNome().equals("")|| activity.getmEdNome() == null){
+        if(activity.getmEdNome().getText().equals("")|| activity.getmEdNome() == null){
             activity.getmEdNome().setError(activity.getString(R.string.error_invalid_nome));
             activity.getmEdNome().requestFocus();
             nome = false;
-//            return false;
         }else {
             nome = true;
         }
@@ -57,7 +56,6 @@ public class CadastroCliente1Controller extends BaseActivityController<CadastroC
             activity.getmEdCpf().setError(activity.getString(R.string.error_invalid_cpf));
             activity.getmEdCpf().requestFocus();
             cpf = false;
-//            return false;
         }else{
             cpf = true;
         }
@@ -66,7 +64,6 @@ public class CadastroCliente1Controller extends BaseActivityController<CadastroC
             activity.getmEdDataNascimento().setError(activity.getString(R.string.error_data_nascimento_invalida));
             activity.getmEdDataNascimento().requestFocus();
             dataDeAniverssário = false;
-//            return false;
         }else {
             dataDeAniverssário = true;
         }
@@ -108,14 +105,14 @@ public class CadastroCliente1Controller extends BaseActivityController<CadastroC
 
         //Nacionalidade
 
-        List<String> nacionalidadeList = new ArrayList<String>();
-        nacionalidadeList.add("Argentino");
-        nacionalidadeList.add("Brasileiro");
-        nacionalidadeList.add("Peruano");
-
-        ArrayAdapter<String> nacionalidadeAdapter = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, nacionalidadeList);
-        nacionalidadeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        activity.getmSpNacionalidade().setAdapter(nacionalidadeAdapter);
+//        List<String> nacionalidadeList = new ArrayList<String>();
+//        nacionalidadeList.add("Argentino");
+//        nacionalidadeList.add("Brasileiro");
+//        nacionalidadeList.add("Peruano");
+//
+//        ArrayAdapter<String> nacionalidadeAdapter = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, nacionalidadeList);
+//        nacionalidadeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        activity.getmSpNacionalidade().setAdapter(nacionalidadeAdapter);
 
     }
 
