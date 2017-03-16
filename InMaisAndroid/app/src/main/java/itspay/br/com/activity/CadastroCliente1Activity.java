@@ -16,11 +16,12 @@ public class CadastroCliente1Activity extends AppCompatActivity {
 
     Spinner mSpSexo;
     Spinner mSpEstadoCivil;
-    Spinner mSpNacionalidade;
+//    Spinner mSpNacionalidade;
 
     EditText mEdNome;
     EditText mEdCpf;
     EditText mEdDataNascimento;
+    EditText mEdNacionalidade;
 
     private CadastroCliente1Controller cadastrClienteController = new CadastroCliente1Controller(this);
 
@@ -55,11 +56,12 @@ public class CadastroCliente1Activity extends AppCompatActivity {
         mEdCpf =(EditText)findViewById(R.id.ed_cpf);
         mEdNome =(EditText)findViewById(R.id.ed_nome);
         mEdDataNascimento= (EditText)findViewById(R.id.ed_data_nascimento);
+        mEdNacionalidade = (EditText)findViewById(R.id.ed_nacionalidade);
 
 //        Spinner
         mSpSexo = (Spinner) findViewById(R.id.sp_sexo);
         mSpEstadoCivil = (Spinner) findViewById(R.id.sp_estado_civil);
-        mSpNacionalidade = (Spinner) findViewById(R.id.sp_nacionalidade);
+//        mSpNacionalidade = (Spinner) findViewById(R.id.sp_nacionalidade);
     }
 
     public Spinner getmSpSexo() {
@@ -78,12 +80,20 @@ public class CadastroCliente1Activity extends AppCompatActivity {
         this.mSpEstadoCivil = mSpEstadoCivil;
     }
 
-    public Spinner getmSpNacionalidade() {
-        return mSpNacionalidade;
+//    public Spinner getmSpNacionalidade() {
+//        return mSpNacionalidade;
+//    }
+
+//    public void setmSpNacionalidade(Spinner mSpNacionalidade) {
+//        this.mSpNacionalidade = mSpNacionalidade;
+//    }
+
+    public EditText getmEdNacionalidade() {
+        return mEdNacionalidade;
     }
 
-    public void setmSpNacionalidade(Spinner mSpNacionalidade) {
-        this.mSpNacionalidade = mSpNacionalidade;
+    public void setmEdNacionalidade(EditText mEdNacionalidade) {
+        this.mEdNacionalidade = mEdNacionalidade;
     }
 
     public EditText getmEdNome() {

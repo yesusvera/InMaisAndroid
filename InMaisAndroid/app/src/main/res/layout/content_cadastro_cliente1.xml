@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
-                    android:hint="Nome"
+                    android:hint="Nome Completo"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:layout_editor_absoluteX="8dp"
@@ -75,6 +75,25 @@
                     tools:layout_editor_absoluteY="0dp" />
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+                <EditText
+                    android:id="@+id/ed_nacionalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Nacionalidade"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </android.support.design.widget.TextInputLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,20 +125,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:textStyle="bold"
-                android:paddingLeft="4dp"
-                android:text="Nacionalidade"
-                android:textColor="@color/txt_color_black"
-                android:textSize="14dp" />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:paddingLeft="4dp"-->
+                <!--android:text="Nacionalidade"-->
+                <!--android:textColor="@color/txt_color_black"-->
+                <!--android:textSize="14dp" />-->
 
-            <Spinner
-                android:id="@+id/sp_nacionalidade"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
+            <!--<Spinner-->
+                <!--android:id="@+id/sp_nacionalidade"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp" />-->
 
             <Space
                 android:layout_width="wrap_content"
