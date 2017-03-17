@@ -2,14 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
+
         <item
-            android:id="@+id/nav_marketplace"
+            android:id="@+id/nav_seus_pontos"
             android:icon="@drawable/cart"
-            android:title="Loja" />
+            android:title="Seus Pontos" />
         <item
-            android:id="@+id/nav_termos_de_uso"
+            android:id="@+id/nav_seus_dados"
+            android:icon="@drawable/cart"
+            android:title="Seus Dados" />
+        <item
+            android:id="@+id/nav_resgate"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Termos de Uso"/>
+            android:title="Resgate"/>
+        <item
+            android:id="@+id/nav_shopping"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Shopping"/>
+        <item
+            android:id="@+id/nav_fale_conosco"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="Fale Conosco"/>
 
     </group>
 
@@ -26,25 +40,6 @@
                 android:title="@string/action_settings_trocar_senha_login" />
         </menu>
     </item>
-
-    <item android:title="Fale Conosco">
-        <menu>
-            <item
-                android:id="@+id/nav_call_sac"
-                android:icon="@android:drawable/ic_menu_call"
-                android:title="SAC - (32) 3229-4950" />
-            <item
-                android:id="@+id/nav_call_ouvidoria"
-                android:icon="@android:drawable/ic_menu_call"
-                android:title="SAC - (32) 0800 285 9632 " />
-            <item
-                android:id="@+id/nav_email_fale_conosco"
-                android:icon="@android:drawable/ic_dialog_email"
-                android:title="Email" />
-        </menu>
-    </item>
-
-
 
     <item android:title="">
         <menu>

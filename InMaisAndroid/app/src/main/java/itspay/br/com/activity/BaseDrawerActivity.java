@@ -105,16 +105,16 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
             meusCartoesController.abrirTrocarEmail();
         } else if (id == R.id.nav_trocar_senha) {
             meusCartoesController.abrirTrocarSenha();
-        } else if (id == R.id.nav_termos_de_uso) {
+        } else if (id == R.id.nav_seus_pontos) {
             Intent intent = new Intent(this, TermosDeUsoActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_marketplace) {
+        } else if (id == R.id.nav_seus_dados) {
             abrirMarketPlace();
-        } else if(id == R.id.nav_call_sac){
+        } else if(id == R.id.nav_resgate){
             meusCartoesController.ligar("3232294950");
-        } else if(id == R.id.nav_call_ouvidoria){
+        } else if(id == R.id.nav_shopping){
             meusCartoesController.ligar("3208002859632");
-        } else if(id == R.id.nav_email_fale_conosco){
+        } else if(id == R.id.nav_fale_conosco){
             meusCartoesController.enviarEmail(getString(R.string.info_email), "", "","");
         } else if(id == R.id.nav_logout){
             meusCartoesController.logout();
