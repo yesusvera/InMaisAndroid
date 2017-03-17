@@ -115,7 +115,8 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         } else if(id == R.id.nav_shopping){
             meusCartoesController.ligar("3208002859632");
         } else if(id == R.id.nav_fale_conosco){
-            meusCartoesController.enviarEmail(getString(R.string.info_email), "", "","");
+            Intent intent = new Intent(this, FaleConoscoActivity.class);
+            startActivity(intent);
         } else if(id == R.id.nav_logout){
             meusCartoesController.logout();
         }

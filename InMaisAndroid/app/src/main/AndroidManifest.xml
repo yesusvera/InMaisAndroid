@@ -174,7 +174,12 @@
         <activity
             android:name="itspay.br.com.activity.DadosParaContatoActivity"
             android:label="@string/title_activity_dados_para_contato"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="itspay.br.com.activity.FaleConoscoActivity"
+            android:label="@string/title_activity_dados_para_contato"
+            android:theme="@style/AppTheme" />
+        <activity android:name="itspay.br.com.activity.ExtratoActivity"></activity>
     </application>
 
 </manifest>
