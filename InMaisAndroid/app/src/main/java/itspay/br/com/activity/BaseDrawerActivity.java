@@ -27,7 +27,6 @@ import itspay.br.com.util.mask.MaskEditTextChangedListener;
 
 public class BaseDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-
     private int mLayoutView;
     private Context mContext;
     private View mMainView;
@@ -106,7 +105,7 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         } else if (id == R.id.nav_trocar_senha) {
             meusCartoesController.abrirTrocarSenha();
         } else if (id == R.id.nav_seus_pontos) {
-            Intent intent = new Intent(this, TermosDeUsoActivity.class);
+            Intent intent = new Intent(this, VisaoGeralActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_seus_dados) {
             abrirMarketPlace();

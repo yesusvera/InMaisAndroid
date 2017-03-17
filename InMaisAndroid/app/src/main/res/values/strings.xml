@@ -3,6 +3,9 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
+    <string name="prompt_ultimos_creditos">Últimos Créditos</string>
+    <string name="prompt_ultimos_resgates">Últimos Resgates</string>
+    <string name="prompt_pontos">Pontos</string>
     <string name="prompt_password">Senha</string>
     <string name="prompt_confirma_password">Confirmar Senha</string>v
     <string name="prompt_numero_cartao_destino">Número do cartão de destino</string>
@@ -87,10 +90,13 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
     <string name="prompt_cpf">CPF</string>
+    <string name="prompt_tel">Telefone</string>
     <string name="prompt_novo_email">Novo Email</string>
     <string name="prompt_numero_cartao">Número do Cartão</string>
     <string name="prompt_data_nascimento">Data de Nascimento</string>
+    <string name="prompt_parceiro">Parceiro</string>
     <string name="prompt_confirmar_senha">Confirmar Senha</string>
     <string name="title_activity_cadastro_login">Cadastro Login</string>
     <string name="title_activity_termos_de_uso">Termos de Uso</string>

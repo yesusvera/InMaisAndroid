@@ -6,30 +6,31 @@
 
         <item
             android:id="@+id/nav_seus_pontos"
-            android:icon="@drawable/cart"
+            android:icon="@drawable/ic_action_geral"
             android:title="Seus Pontos" />
         <item
             android:id="@+id/nav_seus_dados"
-            android:icon="@drawable/cart"
+            android:icon="@android:drawable/ic_menu_info_details"
             android:title="Seus Dados" />
+
         <item
             android:id="@+id/nav_resgate"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/ic_action_resgate"
             android:title="Resgate"/>
         <item
             android:id="@+id/nav_shopping"
-            android:icon="@android:drawable/ic_menu_info_details"
+            android:icon="@drawable/cart"
             android:title="Shopping"/>
-        <item
-            android:id="@+id/nav_fale_conosco"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Fale Conosco"/>
 
     </group>
 
 
     <item android:title="Ajustes Gerais">
         <menu>
+            <item
+                android:id="@+id/nav_fale_conosco"
+                android:icon="@drawable/ic_action_fale_conosco"
+                android:title="Fale Conosco"/>
             <item
                 android:id="@+id/nav_trocar_email_portador"
                 android:icon="@android:drawable/ic_dialog_email"
