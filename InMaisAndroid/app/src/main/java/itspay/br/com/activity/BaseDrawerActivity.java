@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +16,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.nightonke.boommenu.BoomButtons.BoomButton;
+import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
+import com.nightonke.boommenu.BoomMenuButton;
+import com.nightonke.boommenu.ButtonEnum;
+import com.nightonke.boommenu.OnBoomListener;
+import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.controller.BaseController;
@@ -41,6 +49,8 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
     NavigationView mNavigationView;
 
     private View mDrawerHeader;
+
+    private BoomMenuButton bmb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,7 +122,7 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         } else if(id == R.id.nav_resgate){
             meusCartoesController.ligar("3232294950");
         } else if(id == R.id.nav_shopping){
-            meusCartoesController.ligar("3208002859632");
+            abrirMarketPlace();
         } else if(id == R.id.nav_fale_conosco){
             Intent intent = new Intent(this, FaleConoscoActivity.class);
             startActivity(intent);
@@ -123,6 +133,105 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void initFloatinButon(ModuleType module) {
+
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+
+        if(module == ModuleType.SEUS_PONTOS) {
+            assert bmb != null;
+            bmb.setButtonEnum(ButtonEnum.TextInsideCircle);
+
+            BuilderManagerFloatingButton.imageResourceIndex = 0;
+            BuilderManagerFloatingButton.imageResources = new int[]{
+                   R.drawable.ic_action_geral,
+                    R.drawable.ic_money,
+                    R.drawable.ic_observar,
+            };
+            BuilderManagerFloatingButton.textResources = new int[]{
+                    R.string.str_icone_visao_geral,
+                    R.string.prompt_extrato,
+                    R.string.str_icone_acompanhar_resgate,
+            };
+            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_3_1);
+            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_3_1);
+
+            bmb.setOnBoomListener(new OnBoomListener() {
+                @Override
+                public void onClicked(int index, BoomButton boomButton) {
+                    int strSelectedResource = BuilderManagerFloatingButton.textResources[index];
+
+                    switch (strSelectedResource) {
+                        case R.string.prompt_extrato:
+                            extrato();
+                            break;
+//                    case R.string.str_icone_transferir : escolherTipoTransferencia(); break;
+                        case R.string.str_icone_visao_geral:
+                            visaoGeral();
+                            break;
+                    }
+                }
+
+                @Override
+                public void onBackgroundClick() {
+
+                }
+
+                @Override
+                public void onBoomWillHide() {
+
+                }
+
+                @Override
+                public void onBoomDidHide() {
+
+                }
+
+                @Override
+                public void onBoomWillShow() {
+
+                }
+
+                @Override
+                public void onBoomDidShow() {
+
+                }
+            });
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            bmb.setNormalColor(getColor(R.color.principal_color));
+        }
+
+        for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
+            bmb.addBuilder(BuilderManagerFloatingButton.getTextInsideCircleButtonBuilder(getApplicationContext()));
+
+
+    }
+
+    private void visaoGeral() {
+        if (this instanceof VisaoGeralActivity) {
+        }else{
+            Intent intent = new Intent(this, VisaoGeralActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    private void extrato() {
+        if (this instanceof ExtratoActivity) {
+        }else {
+            Intent intent = new Intent(this, ExtratoActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
+    public enum ModuleType {
+        SEUS_PONTOS,
+        SEUS_DADDOS,
     }
 
     public int getmLayoutView() {

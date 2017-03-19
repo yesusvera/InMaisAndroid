@@ -1,6 +1,9 @@
 package itspay.br.com.activity;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 
 import com.nightonke.boommenu.BoomButtons.HamButton;
 import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
@@ -47,11 +50,12 @@ public class BuilderManagerFloatingButton {
                 .normalImageRes(getImageResource());
     }
 
-    static TextInsideCircleButton.Builder getTextInsideCircleButtonBuilder() {
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    static TextInsideCircleButton.Builder getTextInsideCircleButtonBuilder(Context context) {
         return new TextInsideCircleButton.Builder()
                 .normalImageRes(getImageResource())
                 .normalTextRes(getTextResource())
-                .pieceColor(Color.WHITE).normalColor(Color.parseColor("#ab772d"));
+                .pieceColor(Color.WHITE).normalColor(context.getColor(R.color.principal_color));
                 //.normalTextRes(R.string.texto_icone);
     }
 

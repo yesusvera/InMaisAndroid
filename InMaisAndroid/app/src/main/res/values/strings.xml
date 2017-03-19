@@ -107,6 +107,8 @@
     <string name="str_icone_ajustes_seguranca">Ajustes de Segurança</string>
     <string name="str_icone_tarifas">Tarifas</string>
     <string name="str_icone_logout">Logout</string>
+    <string name="str_icone_visao_geral">Visão Geral</string>
+    <string name="str_icone_acompanhar_resgate">Acompanhar Resgate</string>
 
     <string name="texto_icone">Logout</string>
 
@@ -210,6 +212,7 @@
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="prompt_extrato">Extrato</string>
 
     <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Notifications</string>
@@ -262,6 +265,7 @@
     <string name="title_activity_cadastro_cliente1">Cadastro Cliente</string>
     <string name="title_activity_cadastro_endereco_acitvity">Cadastro Endereço</string>
     <string name="title_activity_dados_para_contato">Dados Para Contato</string>
+    <string name="title_activity_extrato">Extrato</string>
     <string name="title_fale_conosco">Fale Conosco></string>>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
