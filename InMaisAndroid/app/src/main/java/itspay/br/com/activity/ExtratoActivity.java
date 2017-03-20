@@ -11,5 +11,7 @@ public class ExtratoActivity extends BaseDrawerActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setLayoutView(R.layout.activity_extrato);
         super.onCreate(savedInstanceState);
+
+
     }
 }

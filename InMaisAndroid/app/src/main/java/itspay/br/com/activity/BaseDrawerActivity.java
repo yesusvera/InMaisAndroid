@@ -118,7 +118,8 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
             Intent intent = new Intent(this, VisaoGeralActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_seus_dados) {
-            abrirMarketPlace();
+            Intent intent = new Intent(this, ExtratoActivity.class);
+            startActivity(intent);
         } else if(id == R.id.nav_resgate){
             meusCartoesController.ligar("3232294950");
         } else if(id == R.id.nav_shopping){
