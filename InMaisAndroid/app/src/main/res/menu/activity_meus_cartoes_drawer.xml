@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
+
+    <item android:title="Seus Pontos">
+        <menu>
+            <item
+                android:id="@+id/nav_visão_geral"
+                android:icon="@drawable/ic_action_fale_conosco"
+                android:title="Visão Geral"/>
+            <item
+                android:id="@+id/nav_extrato"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Extrato" />
+            <item
+                android:id="@+id/nav_acompanhar_resgates"
+                android:icon="@android:drawable/ic_partial_secure"
+                android:title="Acompanhar Resgates" />
+        </menu>
+    </item>
+
+    <item android:title="Seus Dados">
+        <menu>
+            <item
+                android:id="@+id/nav_alterar_dados_pessoais"
+                android:icon="@drawable/ic_action_fale_conosco"
+                android:title="Alterar Dados Pessoais"/>
+            <item
+                android:id="@+id/nav_meus_dados_para_creditos"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Meus Dados Para Créditos" />
+            <item
+                android:id="@+id/nav_alterar_senha"
+                android:icon="@android:drawable/ic_partial_secure"
+                android:title="Alterar Senha" />
+        </menu>
+    </item>
+
     <group android:checkableBehavior="single">
 
-
-        <item
-            android:id="@+id/nav_seus_pontos"
-            android:icon="@drawable/ic_action_geral"
-            android:title="Seus Pontos" />
-        <item
-            android:id="@+id/nav_seus_dados"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Seus Dados" />
 
         <item
             android:id="@+id/nav_resgate"
@@ -21,26 +49,13 @@
             android:id="@+id/nav_shopping"
             android:icon="@drawable/cart"
             android:title="Shopping"/>
+        <item
+            android:id="@+id/nav_fale_conosco"
+            android:icon="@drawable/cart"
+            android:title="Fale Conosco"/>
+
 
     </group>
-
-
-    <item android:title="Ajustes Gerais">
-        <menu>
-            <item
-                android:id="@+id/nav_fale_conosco"
-                android:icon="@drawable/ic_action_fale_conosco"
-                android:title="Fale Conosco"/>
-            <item
-                android:id="@+id/nav_trocar_email_portador"
-                android:icon="@android:drawable/ic_dialog_email"
-                android:title="@string/action_settings_trocar_email_portador" />
-            <item
-                android:id="@+id/nav_trocar_senha"
-                android:icon="@android:drawable/ic_partial_secure"
-                android:title="@string/action_settings_trocar_senha_login" />
-        </menu>
-    </item>
 
     <item android:title="">
         <menu>

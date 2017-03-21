@@ -110,18 +110,27 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_trocar_email_portador) {
-            meusCartoesController.abrirTrocarEmail();
-        } else if (id == R.id.nav_trocar_senha) {
-            meusCartoesController.abrirTrocarSenha();
-        } else if (id == R.id.nav_seus_pontos) {
+        //if (id == R.id.nav_trocar_email_portador) {
+        //    meusCartoesController.abrirTrocarEmail();
+        //} else if (id == R.id.nav_trocar_senha) {
+        //    meusCartoesController.abrirTrocarSenha();
+        if (id == R.id.nav_visão_geral) {
             Intent intent = new Intent(this, VisaoGeralActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_seus_dados) {
+        } else if (id == R.id.nav_extrato) {
             Intent intent = new Intent(this, ExtratoActivity.class);
             startActivity(intent);
-        } else if(id == R.id.nav_resgate){
+        } else if(id == R.id.nav_acompanhar_resgates){
+            Intent intent = new Intent(this, ResumoPedidoActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.nav_alterar_dados_pessoais){
+            Intent intent = new Intent(this, DadosPessoaisActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.nav_meus_dados_para_creditos){
             meusCartoesController.ligar("3232294950");
+        }else if(id == R.id.nav_alterar_senha){
+            Intent intent = new Intent(this, TrocarSenhaActivity.class);
+            startActivity(intent);
         } else if(id == R.id.nav_shopping){
             abrirMarketPlace();
         } else if(id == R.id.nav_fale_conosco){
