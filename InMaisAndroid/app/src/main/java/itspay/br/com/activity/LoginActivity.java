@@ -127,11 +127,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 //        Regra de View FingerPrint
         keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
-        fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
+
 
         mCustomFingerPrint = new CustomFingerPrint(getBaseContext(),fingerprintManager,keyguardManager , this);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
             if (mCustomFingerPrint.isFingerPrint()) {
                 mLlFingerPrint.setVisibility(View.VISIBLE);
             } else {

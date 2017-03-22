@@ -188,7 +188,7 @@ public class CartaoActivity extends AppCompatActivity {
 
             }
         });
-        configureTabs();
+//        configureTabs();
 
         swipeRefreshExtrato = (SwipeRefreshLayout)findViewById(R.id.swipeRefreshExtrato);
 
@@ -210,33 +210,33 @@ public class CartaoActivity extends AppCompatActivity {
         cartaoController.carregarCredencialDetalhe();
     }
 
-    public void configureTabs(){
-        //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("15");
-        spec.setContent(R.id.tab1);
-        spec.setIndicator("15 Dias");
-        host.addTab(spec);
-
-        //Tab 2
-        spec = host.newTabSpec("30");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator("30 Dias");
-        host.addTab(spec);
-
-        //Tab 3
-        spec = host.newTabSpec("45");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("45 Dias");
-        host.addTab(spec);
-
-        host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String s) {
-                setPeriodo(s);
-                cartaoController.carregarExtrato();
-            }
-        });
-    }
+//    public void configureTabs(){
+//        //Tab 1
+//        TabHost.TabSpec spec = host.newTabSpec("15");
+//        spec.setContent(R.id.tab1);
+//        spec.setIndicator("15 Dias");
+//        host.addTab(spec);
+//
+//        //Tab 2
+//        spec = host.newTabSpec("30");
+//        spec.setContent(R.id.tab2);
+//        spec.setIndicator("30 Dias");
+//        host.addTab(spec);
+//
+//        //Tab 3
+//        spec = host.newTabSpec("45");
+//        spec.setContent(R.id.tab3);
+//        spec.setIndicator("45 Dias");
+//        host.addTab(spec);
+//
+//        host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+//            @Override
+//            public void onTabChanged(String s) {
+//                setPeriodo(s);
+//                cartaoController.carregarExtrato();
+//            }
+//        });
+//    }
 
     public void configuraCartao(){
         mListView.setItemAnimator(new FlipInBottomXAnimator());

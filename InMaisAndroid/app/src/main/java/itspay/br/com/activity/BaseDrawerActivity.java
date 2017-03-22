@@ -131,7 +131,10 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         }else if(id == R.id.nav_alterar_senha){
             Intent intent = new Intent(this, TrocarSenhaActivity.class);
             startActivity(intent);
-        } else if(id == R.id.nav_shopping){
+//        }  else if (id == R.id.nav_resgate) {
+//            Intent intent = new Intent(this, CartaoActivity.class);
+//            startActivity(intent);
+        }    else if(id == R.id.nav_shopping){
             abrirMarketPlace();
         } else if(id == R.id.nav_fale_conosco){
             Intent intent = new Intent(this, FaleConoscoActivity.class);

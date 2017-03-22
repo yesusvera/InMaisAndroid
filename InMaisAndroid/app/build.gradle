@@ -44,7 +44,7 @@ dependencies {
     }
 
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.android.support:support-annotations:24.2.0'
+    compile 'com.android.support:support-annotations:23.2.1'
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support:design:25.0.1'
     compile 'io.card:android-sdk:5.4.2'
