@@ -231,11 +231,11 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
     }
 
     private void extrato() {
-        if (this instanceof ExtratoActivity) {
-        }else {
+//        if (this instanceof ExtratoActivity) {
+//        }else {
             Intent intent = new Intent(this, ExtratoActivity.class);
             startActivity(intent);
-        }
+//        }
     }
 
 

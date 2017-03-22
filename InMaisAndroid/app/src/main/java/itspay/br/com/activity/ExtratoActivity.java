@@ -1,16 +1,17 @@
 package itspay.br.com.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import itspay.br.com.itspay.R;
 
 
-public class ExtratoActivity extends BaseDrawerActivity {
+public class ExtratoActivity  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setLayoutView(R.layout.activity_extrato);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_extrato);
 
 
     }
