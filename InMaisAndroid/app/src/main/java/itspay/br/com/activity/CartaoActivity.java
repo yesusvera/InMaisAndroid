@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -35,13 +36,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.controller.CartaoController;
+import itspay.br.com.controller.MeusCartoesController;
 import itspay.br.com.itspay.R;
 import itspay.br.com.model.Credencial;
 import itspay.br.com.model.LinhaExtratoCredencial;
+import itspay.br.com.services.ConnectPortadorService;
 import itspay.br.com.util.Utils;
+import itspay.br.com.util.UtilsActivity;
 import jp.wasabeef.recyclerview.animators.FadeInLeftAnimator;
 import jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator;
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CartaoActivity extends AppCompatActivity {
 
@@ -52,29 +61,33 @@ public class CartaoActivity extends AppCompatActivity {
     private CartaoController cartaoController = new CartaoController(this);
     private SwipeRefreshLayout swipeRefreshExtrato;
     private String periodo = "15";
-    private BoomMenuButton bmb;
+//    private BoomMenuButton bmb;
     public TextView txtMensagemExtrato;
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cartao);
 
+            cartaoController.listarCredenciais();
+    }
+
+    public void posServico(){
+
         setTitle("Cartão " + credencialDetalhe.getNomeProduto() + " - " + credencialDetalhe.getCredencialUltimosDigitos());
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         mListView = (MaterialListView) findViewById(R.id.material_listview);
         mListView.addOnItemTouchListener(new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(@NonNull Card card, int position) {
                 if(position==0){
-                    if(bmb!=null){
-                        bmb.boom();
-                    }
+//                    if(bmb!=null){
+//                        bmb.boom();
+//                    }
                 }
             }
 
@@ -89,107 +102,109 @@ public class CartaoActivity extends AppCompatActivity {
         host = (TabHost)findViewById(R.id.tabhost);
         host.setup();
 
-        bmb = (BoomMenuButton) findViewById(R.id.bmb);
-        assert bmb != null;
-        bmb.setButtonEnum(ButtonEnum.TextInsideCircle);
-        if(credencialDetalhe.getIdProdutoPlataforma()==2 || credencialDetalhe.getIdProdutoPlataforma()==3){
-            BuilderManagerFloatingButton.imageResourceIndex = 0;
-            BuilderManagerFloatingButton.imageResources = new int[]{
-                    R.drawable.menu_icon4,
-                    R.drawable.menu_icon6
-            };
-            BuilderManagerFloatingButton.textResources = new int[]{
-                    R.string.str_icone_ajustes_seguranca,
-                    R.string.str_icone_logout
-            };
-            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_2_1);
-            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_2_1);
-        }else if(credencialDetalhe.getIdProdutoPlataforma()==4){
-            BuilderManagerFloatingButton.imageResourceIndex = 0;
-            BuilderManagerFloatingButton.imageResources = new int[]{
-                    R.drawable.menu_icon3,
-                    R.drawable.menu_icon4,
-                    R.drawable.menu_icon6
-
-            };
-            BuilderManagerFloatingButton.textResources = new int[]{
-                    R.string.str_icone_cartoes_virtuais,
-                    R.string.str_icone_ajustes_seguranca,
-                    R.string.str_icone_logout
-            };
-            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_3_1);
-            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_3_1);
-        }else{
-            BuilderManagerFloatingButton.imageResourceIndex = 0;
-            BuilderManagerFloatingButton.imageResources = new int[]{
-                    R.drawable.menu_icon1,
-                    R.drawable.menu_icon2,
-                    R.drawable.menu_icon3,
-                    R.drawable.menu_icon4,
-                    R.drawable.menu_icon5,
-                    R.drawable.menu_icon6
-            };
-            BuilderManagerFloatingButton.textResources = new int[]{
-                    R.string.str_icone_transferir,
-                    R.string.str_icone_inserir_carga,
-                    R.string.str_icone_cartoes_virtuais,
-                    R.string.str_icone_ajustes_seguranca,
-                    R.string.str_icone_tarifas,
-                    R.string.str_icone_logout
-            };
-            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_6_1);
-            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_6_1);
-        }
-
-        bmb.setNormalColor(Color.parseColor("#00273f"));
-
-        for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
-            bmb.addBuilder(BuilderManagerFloatingButton.getTextInsideCircleButtonBuilder(getApplicationContext()));
-
-
-        bmb.setOnBoomListener(new OnBoomListener() {
-            @Override
-            public void onClicked(int index, BoomButton boomButton) {
-               int strSelectedResource = BuilderManagerFloatingButton.textResources[index];
-
-               switch(strSelectedResource){
-                   case R.string.str_icone_logout: logout(); break;
-                   case R.string.str_icone_transferir : escolherTipoTransferencia(); break;
-                   case R.string.str_icone_inserir_carga : inserirCarga(); break;
-                   case R.string.str_icone_cartoes_virtuais : cartoesVirtuais(); break;
-                   case R.string.str_icone_ajustes_seguranca : ajustesDeSeguranca(); break;
-                   case R.string.str_icone_tarifas : tarifas(); break;
-
-               }
-            }
-
-            @Override
-            public void onBackgroundClick() {
-
-            }
-
-            @Override
-            public void onBoomWillHide() {
-
-            }
-
-            @Override
-            public void onBoomDidHide() {
-
-            }
-
-            @Override
-            public void onBoomWillShow() {
-
-            }
-
-            @Override
-            public void onBoomDidShow() {
-
-            }
-        });
-//        configureTabs();
-
+//        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+//        assert bmb != null;
+//        bmb.setButtonEnum(ButtonEnum.TextInsideCircle);
+//        if(credencialDetalhe.getIdProdutoPlataforma()==2 || credencialDetalhe.getIdProdutoPlataforma()==3){
+//            BuilderManagerFloatingButton.imageResourceIndex = 0;
+//            BuilderManagerFloatingButton.imageResources = new int[]{
+//                    R.drawable.menu_icon4,
+//                    R.drawable.menu_icon6
+//            };
+//            BuilderManagerFloatingButton.textResources = new int[]{
+//                    R.string.str_icone_ajustes_seguranca,
+//                    R.string.str_icone_logout
+//            };
+//            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_2_1);
+//            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_2_1);
+//        }else if(credencialDetalhe.getIdProdutoPlataforma()==4){
+//            BuilderManagerFloatingButton.imageResourceIndex = 0;
+//            BuilderManagerFloatingButton.imageResources = new int[]{
+//                    R.drawable.menu_icon3,
+//                    R.drawable.menu_icon4,
+//                    R.drawable.menu_icon6
+//
+//            };
+//            BuilderManagerFloatingButton.textResources = new int[]{
+//                    R.string.str_icone_cartoes_virtuais,
+//                    R.string.str_icone_ajustes_seguranca,
+//                    R.string.str_icone_logout
+//            };
+//            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_3_1);
+//            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_3_1);
+//        }else{
+//            BuilderManagerFloatingButton.imageResourceIndex = 0;
+//            BuilderManagerFloatingButton.imageResources = new int[]{
+//                    R.drawable.menu_icon1,
+//                    R.drawable.menu_icon2,
+//                    R.drawable.menu_icon3,
+//                    R.drawable.menu_icon4,
+//                    R.drawable.menu_icon5,
+//                    R.drawable.menu_icon6
+//            };
+//            BuilderManagerFloatingButton.textResources = new int[]{
+//                    R.string.str_icone_transferir,
+//                    R.string.str_icone_inserir_carga,
+//                    R.string.str_icone_cartoes_virtuais,
+//                    R.string.str_icone_ajustes_seguranca,
+//                    R.string.str_icone_tarifas,
+//                    R.string.str_icone_logout
+//            };
+//            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_6_1);
+//            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_6_1);
+//        }
+//
+//        bmb.setNormalColor(Color.parseColor("#00273f"));
+//
+//        for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                bmb.addBuilder(BuilderManagerFloatingButton.getTextInsideCircleButtonBuilder(getApplicationContext()));
+//            }
+//
+//
+//        bmb.setOnBoomListener(new OnBoomListener() {
+//            @Override
+//            public void onClicked(int index, BoomButton boomButton) {
+//                int strSelectedResource = BuilderManagerFloatingButton.textResources[index];
+//
+//                switch(strSelectedResource){
+//                    case R.string.str_icone_logout: logout(); break;
+//                    case R.string.str_icone_transferir : escolherTipoTransferencia(); break;
+//                    case R.string.str_icone_inserir_carga : inserirCarga(); break;
+//                    case R.string.str_icone_cartoes_virtuais : cartoesVirtuais(); break;
+//                    case R.string.str_icone_ajustes_seguranca : ajustesDeSeguranca(); break;
+//                    case R.string.str_icone_tarifas : tarifas(); break;
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onBackgroundClick() {
+//
+//            }
+//
+//            @Override
+//            public void onBoomWillHide() {
+//
+//            }
+//
+//            @Override
+//            public void onBoomDidHide() {
+//
+//            }
+//
+//            @Override
+//            public void onBoomWillShow() {
+//
+//            }
+//
+//            @Override
+//            public void onBoomDidShow() {
+//
+//            }
+//        });
+        configureTabs();
+//
         swipeRefreshExtrato = (SwipeRefreshLayout)findViewById(R.id.swipeRefreshExtrato);
 
         swipeRefreshExtrato.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -200,43 +215,42 @@ public class CartaoActivity extends AppCompatActivity {
             }
         });
 
+        cartaoController.carregarExtrato();
+        cartaoController.carregarCredencialDetalhe();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        cartaoController.carregarExtrato();
-        cartaoController.carregarCredencialDetalhe();
     }
 
-//    public void configureTabs(){
-//        //Tab 1
-//        TabHost.TabSpec spec = host.newTabSpec("15");
-//        spec.setContent(R.id.tab1);
-//        spec.setIndicator("15 Dias");
-//        host.addTab(spec);
-//
-//        //Tab 2
-//        spec = host.newTabSpec("30");
-//        spec.setContent(R.id.tab2);
-//        spec.setIndicator("30 Dias");
-//        host.addTab(spec);
-//
-//        //Tab 3
-//        spec = host.newTabSpec("45");
-//        spec.setContent(R.id.tab3);
-//        spec.setIndicator("45 Dias");
-//        host.addTab(spec);
-//
-//        host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-//            @Override
-//            public void onTabChanged(String s) {
-//                setPeriodo(s);
-//                cartaoController.carregarExtrato();
-//            }
-//        });
-//    }
+    public void configureTabs(){
+        //Tab 1
+        TabHost.TabSpec spec = host.newTabSpec("30");
+        spec.setContent(R.id.tab1);
+        spec.setIndicator("30 Dias");
+        host.addTab(spec);
+
+        //Tab 2
+        spec = host.newTabSpec("60");
+        spec.setContent(R.id.tab2);
+        spec.setIndicator("60 Dias");
+        host.addTab(spec);
+
+        //Tab 3
+        spec = host.newTabSpec("90");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("90 Dias");
+        host.addTab(spec);
+
+        host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                setPeriodo(s);
+                cartaoController.carregarExtrato();
+            }
+        });
+    }
 
     public void configuraCartao(){
         mListView.setItemAnimator(new FlipInBottomXAnimator());
@@ -245,7 +259,7 @@ public class CartaoActivity extends AppCompatActivity {
         mListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bmb.callOnClick();
+//                bmb.callOnClick();
             }
         });
 
@@ -253,31 +267,31 @@ public class CartaoActivity extends AppCompatActivity {
         mListView.getAdapter().add(new Utils().novoCartaoCredencial(credencialDetalhe, CartaoActivity.this));
 
         //PEGANDO A FOTO
-//        Call<ResponseBody> call = ConnectPortadorService
-//                .getService()
-//                .abrirPlastico(
-//                        credencialDetalhe.getIdPlastico(),
-//                        IdentityItsPay.getInstance().getToken());
-//
-//        call.enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//                if(response.body()!=null && response.body().byteStream()!=null) {
-//                    credencialDetalhe.setDrawable(new BitmapDrawable(response.body().byteStream()));
-//                }
-//
-//                mListView.getAdapter().clearAll();
-//                mListView.getAdapter().add(new Utils().novoCartaoCredencial(credencialDetalhe, CartaoActivity.this));
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                UtilsActivity.alertIfSocketException(t, CartaoActivity.this);
-//
-//                mListView.getAdapter().clearAll();
-//                mListView.getAdapter().add(new Utils().novoCartaoCredencial(credencialDetalhe, CartaoActivity.this));
-//            }
-//        });
+        Call<ResponseBody> call = ConnectPortadorService
+                .getService()
+                .abrirPlastico(
+                        credencialDetalhe.getIdPlastico(),
+                        IdentityItsPay.getInstance().getToken());
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if(response.body()!=null && response.body().byteStream()!=null) {
+                    credencialDetalhe.setDrawable(new BitmapDrawable(response.body().byteStream()));
+                }
+
+                mListView.getAdapter().clearAll();
+                mListView.getAdapter().add(new Utils().novoCartaoCredencial(credencialDetalhe, CartaoActivity.this));
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                UtilsActivity.alertIfSocketException(t, CartaoActivity.this);
+
+                mListView.getAdapter().clearAll();
+                mListView.getAdapter().add(new Utils().novoCartaoCredencial(credencialDetalhe, CartaoActivity.this));
+            }
+        });
 
 
     }

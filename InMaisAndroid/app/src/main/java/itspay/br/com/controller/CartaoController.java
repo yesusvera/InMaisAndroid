@@ -1,6 +1,7 @@
 package itspay.br.com.controller;
 
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 
 import java.util.Calendar;
@@ -9,8 +10,10 @@ import java.util.Date;
 import itspay.br.com.activity.CartaoActivity;
 import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.model.Credencial;
+import itspay.br.com.model.GetCredenciaisResponse;
 import itspay.br.com.model.LinhaExtratoCredencial;
 import itspay.br.com.services.ConnectPortadorService;
+import itspay.br.com.util.ItsPayConstants;
 import itspay.br.com.util.UtilsActivity;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -108,4 +111,48 @@ public class CartaoController extends BaseActivityController<CartaoActivity> {
         });
     }
 
+
+    public void listarCredenciais(){
+
+        IdentityItsPay identity = IdentityItsPay.getInstance();
+
+        Call<GetCredenciaisResponse> callListaCredencial
+                =  ConnectPortadorService
+                .getService()
+                .listaCredenciais(
+                        identity.getLoginPortador().getCpf().replace(".", "").replace("-", ""),
+                        ItsPayConstants.TIPO_PESSOA,
+                        ItsPayConstants.ID_PROCESSADORA,
+                        ItsPayConstants.ID_INSTITUICAO,
+                        identity.getLoginPortadorResponse().getToken()
+                );
+
+        callListaCredencial.enqueue(new Callback<GetCredenciaisResponse>() {
+            @Override
+            public void onResponse(Call<GetCredenciaisResponse> call, Response<GetCredenciaisResponse> response) {
+                if (response.body() != null){
+                    try {
+                        Credencial[] credenciais = response.body().getCredenciais();
+                        activity.credencialDetalhe = credenciais[0];
+
+
+                        activity.posServico();
+                        Log.i("teste", response.toString());
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }else{
+                    UtilsActivity.alertMsg(response.errorBody(),activity);
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<GetCredenciaisResponse> call, Throwable t) {
+                UtilsActivity.alertIfSocketException(t, activity);
+            }
+        });
+    }
 }

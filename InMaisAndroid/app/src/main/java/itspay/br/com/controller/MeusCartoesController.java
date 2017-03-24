@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
+import itspay.br.com.activity.CartaoActivity;
 import itspay.br.com.activity.MeusCartoesActivity;
 import itspay.br.com.activity.TrocarEmailActivity;
 import itspay.br.com.activity.TrocarSenhaActivity;

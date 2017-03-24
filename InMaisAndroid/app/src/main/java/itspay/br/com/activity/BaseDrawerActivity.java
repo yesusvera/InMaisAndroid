@@ -118,7 +118,7 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
             Intent intent = new Intent(this, VisaoGeralActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_extrato) {
-            Intent intent = new Intent(this, ExtratoActivity.class);
+            Intent intent = new Intent(this, CartaoActivity.class);
             startActivity(intent);
         } else if(id == R.id.nav_acompanhar_resgates){
             Intent intent = new Intent(this, PedidoDetalheActivity.class);

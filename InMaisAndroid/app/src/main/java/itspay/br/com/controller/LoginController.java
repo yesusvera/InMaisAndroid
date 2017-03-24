@@ -12,6 +12,7 @@ import java.io.IOException;
 
 import itspay.br.com.activity.LoginActivity;
 import itspay.br.com.activity.MeusCartoesActivity;
+import itspay.br.com.activity.VisaoGeralActivity;
 import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.model.FazerLoginPortador;
 import itspay.br.com.model.FazerLoginPortadorResponse;
@@ -149,7 +150,7 @@ public class LoginController extends BaseActivityController<LoginActivity>{
     public void redirecionarMeusCartoes(){
         //redirecionando para meus cartões
         MeusCartoesActivity.FORCE_LOGOUT = false;
-        Intent intent = new Intent(activity, MeusCartoesActivity.class);
+        Intent intent = new Intent(activity, VisaoGeralActivity.class);
         activity.startActivity(intent);
     }
 
