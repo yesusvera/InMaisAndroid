@@ -60,7 +60,7 @@ import itspay.br.com.util.validations.ValidationsForms;
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, LocationListener,ObserverResultFingerPrintInterface {
+public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, LocationListener, ObserverResultFingerPrintInterface {
 
 
     private static final int PERMISSION_ACCESS_COARSE_LOCATION = 312;
@@ -132,9 +132,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
 
-
-        mCustomFingerPrint = new CustomFingerPrint(getBaseContext(),fingerprintManager,keyguardManager , this);
-
+            mCustomFingerPrint = new CustomFingerPrint(getBaseContext(), fingerprintManager, keyguardManager, this);
 
             if (mCustomFingerPrint.isFingerPrint()) {
                 mLlFingerPrint.setVisibility(View.VISIBLE);
@@ -145,16 +143,24 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+//      Last Cpf Logged
+        mCpf = SharedPreferenceUtil.getStringPreference(this, "lastCPFLogged");
+        mPassword = SharedPreferenceUtil.getStringPreference(this, "lastPasswordLogged");
+    }
+
     /**
      * Listeners do Layout
-     * */
+     */
     private void initListeners() {
 
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
-
                     attemptLogin();
                     return true;
                 }
@@ -164,20 +170,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
 
 //        Swipe FingerPrint
-
         mSwLoginFingerPrint.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 mSecondLogin = SharedPreferenceUtil.getBooleanPreference(getBaseContext(), IS_SECOND_LOGIN_FINGER_PRINT, false);
                 if (isChecked) {
-                    if (mCustomFingerPrint.checkedRegisterFingerPrint()){
-                            if (!mSecondLogin) {
-                                showAlert("Informação","Para uso do fingerPint você deve acessar com sua senha uma vez.", "OK",false);
-                            }else{
-                                showAlert("Alerta","Nenhuma digital regidstrada nesse dispositivo.", "OK",false);
-                            }
-                            SharedPreferenceUtil.setBooleanPreference(getBaseContext(), IS_FINGER_PRINT_CHECKED, true);
+                    if (mCustomFingerPrint.checkedRegisterFingerPrint()) {
+                        if (!mSecondLogin) {
+                            showAlert("Informação", "Para uso do fingerPint você deve acessar com sua senha uma vez.", "OK", false);
+                        }
+//                            else{
+//                                showAlert("Alerta","Nenhuma digital registrada nesse dispositivo.", "OK",false);
+//                            }
+                        SharedPreferenceUtil.setBooleanPreference(getBaseContext(), IS_FINGER_PRINT_CHECKED, true);
 
                     }
                 } else {
@@ -188,7 +194,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         });
 
 //        Button Login
-
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
@@ -348,9 +353,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
 
-    /**    FingerPrint
+    /**
+     * FingerPrint
      * Request Login use Finger Print
-     * */
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void loginFingerPrint() {
         // Reset errors.
@@ -385,12 +391,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         CarrinhoSingleton.getInstance().esvaziarCarrinho();
-        showAlert("Informação","Posicione o dedo para acessar.", "Cancel",true);
+        showAlert("Informação", "Posicione o dedo para acessar.", "Cancel", true);
         mCustomFingerPrint.show();
 
     }
 
-    public void showAlert(String title,String menssage , String nameButon ,boolean isFingerPrint){
+    public void showAlert(String title, String menssage, String nameButon, boolean isFingerPrint) {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
 
 //        dialogBuilder.setTitle(getString(R.string.app_name));
@@ -412,7 +418,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     protected void onPause() {
         super.onPause();
-        if(mAlertDialog != null) {
+        if (mAlertDialog != null) {
             mAlertDialog.dismiss();
         }
     }
@@ -495,7 +501,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     public void showResultFingerPrint(boolean updateList) {
         showProgress(true);
-        new LoginController(this).login(mCpf,mPassword);
+        new LoginController(this).login(mCpf, mPassword);
     }
 
     private interface ProfileQuery {

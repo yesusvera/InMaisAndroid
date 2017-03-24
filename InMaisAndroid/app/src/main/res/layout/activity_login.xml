@@ -75,7 +75,7 @@
                         android:inputType="number"
                         android:maxLines="1"
                         android:padding="15dp"
-                        android:text="041.289.461-09" />
+                        android:text="160.406.958-97" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -100,7 +100,7 @@
                             android:maxLength="30"
                             android:maxLines="1"
                             android:padding="15dp"
-                            android:text="teste123" />
+                            android:text="abcd1234" />
 
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
@@ -110,6 +110,7 @@
             <LinearLayout
                 android:id="@+id/ll_finger_print"
                 android:layout_marginTop="8dp"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_55dp"
                 android:gravity="right"
