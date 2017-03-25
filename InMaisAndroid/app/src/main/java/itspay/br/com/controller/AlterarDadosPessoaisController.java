@@ -20,7 +20,7 @@ public class AlterarDadosPessoaisController extends BaseActivityController<Alter
 
         activity.getEdcpf().addTextChangedListener(new MaskEditTextChangedListener("###.###.###-##", activity.getEdcpf()));
         activity.getEddatanascimento().addTextChangedListener(new MaskEditTextChangedListener("##/##/####", activity.getEddatanascimento()));
-        activity.getEdcep().addTextChangedListener(new MaskEditTextChangedListener("#####-###", activity.getEdcep()));
+        activity.getEdcep().addTextChangedListener(new MaskEditTextChangedListener("##.###-###", activity.getEdcep()));
         activity.getEdtelefoneresidencial().addTextChangedListener(new MaskEditTextChangedListener("(##)####-####", activity.getEdtelefoneresidencial()));
         activity.getEdtelefonecelular().addTextChangedListener(new MaskEditTextChangedListener("(##)#####-####", activity.getEdtelefonecelular()));
     }
