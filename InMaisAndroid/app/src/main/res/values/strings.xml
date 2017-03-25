@@ -79,6 +79,7 @@
     <string name="error_invalid_email">Este endereço de email é inválido.</string>
     <string name="error_invalid_nome">Digite o nome.</string>
     <string name="error_data_nascimento_invalida">Data de nascimento inválida.</string>
+    <string name="error_invalid">Campo Obrigatório.</string>
     <string name="error_invalid_cpf">Este cpf é inválido</string>
     <string name="error_invalid_password">Digite a senha</string>
     <string name="error_incorrect_password_input">A senha deve possuir números e letras e ter entre 6 e 30 caracteres.</string>
@@ -195,6 +196,24 @@
         <item>180</item>
         <item>360</item>
         <item>-1</item>
+    </string-array>
+
+
+    <string-array name="list_sexo">
+        <item>Masculino</item>
+        <item>Feminino</item>
+        <item>Outros</item>
+    </string-array>
+
+
+
+    <string-array name="list_estado_civil">
+        <item>Solteiro(a)</item>
+        <item>Casado(a)</item>
+        <item>Divorciado(a)</item>
+        <item>Viúvo(a)</item>
+        <item>Separado(a)</item>
+        <item>Companheiro(a)</item>
     </string-array>
 
     <string-array name="list_preference_entries">

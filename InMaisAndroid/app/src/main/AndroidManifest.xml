@@ -184,9 +184,9 @@
             android:label="@string/title_activity_extrato"
             android:theme="@style/TemaFormularios" />
         <activity
-            android:name="itspay.br.com.activity.DadosPessoaisActivity"
+            android:name="itspay.br.com.activity.AlterarDadosPessoaisActivity"
             android:label="@string/title_dados_pessoais"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/TemaFormularios"/>
     </application>
 
 </manifest>

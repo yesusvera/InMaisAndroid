@@ -1,333 +1,359 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    tools:context="itspay.br.com.activity.VisaoGeralActivity">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:context="itspay.br.com.activity.VisaoGeralActivity">
+        android:layout_height="wrap_content">
 
-        <android.support.design.widget.AppBarLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="4dp"
+                android:text="Dados Pessoais"
+                android:paddingBottom="5dp"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
 
-        </android.support.design.widget.AppBarLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="50dp"
-                    android:text="Dados Pessoais"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="14dp" />
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    app:counterMaxLength="13">
-
-
-
-                    <EditText
-                        android:id="@+id/ed_nome"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginTop="8dp"
-                        android:hint="Nome Completo"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="8dp"
-                        tools:layout_editor_absoluteY="0dp" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    app:counterMaxLength="13">
-
-                    <EditText
-                        android:id="@+id/ed_cpf"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:hint="CPF"
-                        android:inputType="number"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="8dp"
-                        tools:layout_editor_absoluteY="0dp" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    app:counterMaxLength="13">
-
-                    <EditText
-                        android:id="@+id/ed_data_nascimento"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Data Nascimento"
-                        android:inputType="number"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="8dp"
-                        tools:layout_editor_absoluteY="0dp" />
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    app:counterMaxLength="13">
-
-                    <EditText
-                        android:id="@+id/ed_nacionalidade"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:hint="Nacionalidade"
-                        android:inputType="number"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="8dp"
-                        tools:layout_editor_absoluteY="0dp" />
-                </android.support.design.widget.TextInputLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="10dp"
-                    android:text="Sexo"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="14dp" />
-
-                <Spinner
-                    android:id="@+id/sp_sexo"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="10dp"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:text="Estado Civil"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="14dp" />
-
-                <Spinner
-                    android:id="@+id/sp_estado_civil"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="10dp"
-                    android:text="Endereço"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="14dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
 
                 <EditText
-                    android:inputType="number"
+                    android:id="@+id/ed_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nome Completo"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+                <EditText
                     android:id="@+id/ed_cpf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="CPF"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="14"
+                    android:singleLine="true"
+                    android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+                <EditText
+                    android:id="@+id/ed_data_nascimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Data Nascimento"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+                <EditText
+                    android:id="@+id/ed_nacionalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Nacionalidade"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="15dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="10dp"
+                android:text="Sexo"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/list_sexo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingTop="10dp"
+                android:text="Estado Civil"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_estado_civil"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/list_estado_civil"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="10dp"
+                android:text="Endereço"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/ed_cep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="CEP"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_endereco"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Endereço"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_numero"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Numero"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_complemento"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Complemento"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_bairro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Bairro"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:padding="15dp"/>
+            </android.support.design.widget.TextInputLayout>
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Cidade"
-                    android:textSize="14dp"
-                    android:textColor="@color/mainTextColor"/>
-
-                <Spinner
-                    android:id="@+id/sp_cidade"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Estado"
-                    android:textSize="14dp"
-                    android:textColor="@color/mainTextColor"/>
-
-                <Spinner
-                    android:id="@+id/sp_estado"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="10dp"
-                    android:text="Dados Para Contato"
-                    android:textStyle="bold"
-                    android:paddingLeft="4dp"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="14dp" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+            <EditText
+                android:id="@+id/ed_endereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Endereço"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
 
 
-                <EditText
-                    android:id="@+id/ed_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_telefone_residencial"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Telefone Residencial"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <EditText
-                    android:id="@+id/ed_telefone_celular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Telefone Celular"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <Button
-                    android:id="@+id/btn_salvar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Salvar"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+            <EditText
+                android:id="@+id/ed_numero_casa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Numero"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:padding="15dp" />
+</android.support.design.widget.TextInputLayout>
 
 
-            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+            <EditText
+                android:id="@+id/ed_complemento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Complemento"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="15dp" />
 
-        </ScrollView>
+            </android.support.design.widget.TextInputLayout>
 
-    </RelativeLayout>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/activity_meus_cartoes_drawer" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+            <EditText
+                android:id="@+id/ed_bairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Bairro"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
 
-</android.support.v4.widget.DrawerLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cidade"
+                android:textColor="@color/mainTextColor"
+                android:textSize="14dp" />
+
+            <Spinner
+                android:id="@+id/sp_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado"
+                android:textColor="@color/mainTextColor"
+                android:textSize="14dp" />
+
+            <Spinner
+                android:id="@+id/sp_estado"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="10dp"
+                android:text="Dados Para Contato"
+                android:textColor="@color/txt_color_black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+            <EditText
+                android:id="@+id/ed_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Email"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+            <EditText
+                android:id="@+id/ed_telefone_residencial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:hint="Telefone Residencial"
+                android:maxLines="1"
+                android:maxLength="13"
+                android:singleLine="true"
+                android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:counterMaxLength="13">
+
+            <EditText
+                android:id="@+id/ed_telefone_celular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:hint="Telefone Celular"
+                android:maxLines="1"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:padding="15dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_salvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_buton_in_app"
+                android:text="Salvar"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/bgContent"
+                android:layout_marginBottom="16dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

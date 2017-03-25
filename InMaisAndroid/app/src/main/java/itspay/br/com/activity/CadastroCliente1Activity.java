@@ -39,7 +39,6 @@ public class CadastroCliente1Activity extends AppCompatActivity {
 
         cadastrClienteController.initDataComponent();
 
-        cadastrClienteController.initDataComponent();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
