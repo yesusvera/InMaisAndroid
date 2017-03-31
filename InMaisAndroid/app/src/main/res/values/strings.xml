@@ -319,6 +319,7 @@
     <string name="title_activity_extrato">Extrato</string>
     <string name="title_fale_conosco">Fale Conosco></string>>
     <string name="title_dados_pessoais">Dados Pessoais></string>
+    <string name="cep_error">CEP invalido</string>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
 

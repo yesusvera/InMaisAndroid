@@ -2,6 +2,7 @@ package itspay.br.com.controller;
 
 import itspay.br.com.activity.AlterarDadosPessoaisActivity;
 import itspay.br.com.itspay.R;
+import itspay.br.com.util.Utils;
 import itspay.br.com.util.mask.MaskEditTextChangedListener;
 import itspay.br.com.util.validations.ValidationsForms;
 
@@ -23,51 +24,79 @@ public class AlterarDadosPessoaisController extends BaseActivityController<Alter
         activity.getEdcep().addTextChangedListener(new MaskEditTextChangedListener("##.###-###", activity.getEdcep()));
         activity.getEdtelefoneresidencial().addTextChangedListener(new MaskEditTextChangedListener("(##)####-####", activity.getEdtelefoneresidencial()));
         activity.getEdtelefonecelular().addTextChangedListener(new MaskEditTextChangedListener("(##)#####-####", activity.getEdtelefonecelular()));
+
+        Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEdcpf(), 14);
+        Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEddatanascimento(), 10);
+        Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEddatanascimento(), 10);
+        Utils.hideSoftKeyboardOnMaxLength(activity,activity.getEdtelefonecelular(), 13);
+        Utils.nextInputOnMaxLength(activity, activity.getEdtelefoneresidencial(),activity.getEdtelefonecelular(), 13);
     }
 
     public boolean isValidateActivity(){
-        boolean nome = false;
-        boolean cpf = false;
-        boolean dataDeAniverssário = false;
+        boolean nomeError = false;
+        boolean cpfError = false;
+        boolean dataDeAniverssárioError = false;
+        boolean emailError = false;
+        boolean nacionalidadeError = false;
+        boolean telefoneCelularError = false;
+        boolean cepError = false;
 
 
         if(activity.getEdnome().getText().toString().isEmpty()){
             activity.getEdnome().setError(activity.getString(R.string.error_invalid));
             activity.getEdnome().requestFocus();
-            return false;
-        }
-
-
-        if(activity.getEdnacionalidade().getText().toString().isEmpty()){
-            activity.getEdnacionalidade().setError(activity.getString(R.string.error_invalid));
-            activity.getEdnacionalidade().requestFocus();
-            return false;
+            nomeError = true;
         }
 
 
         if(activity.getEddatanascimento().getText().toString().length() < 10){
             activity.getEddatanascimento().setError(activity.getString(R.string.error_data_nascimento_invalida));
             activity.getEddatanascimento().requestFocus();
-            return false;
+            dataDeAniverssárioError = true;
+        }
+
+
+        if(activity.getEdnacionalidade().getText().toString().isEmpty()){
+            activity.getEdnacionalidade().setError(activity.getString(R.string.error_invalid));
+            activity.getEdnacionalidade().requestFocus();
+            nacionalidadeError = true;
         }
 
         if(!ValidationsForms.isCPF(activity.getEdcpf().getText().toString())){
             activity.getEdcpf().setError(activity.getString(R.string.error_invalid_cpf));
             activity.getEdcpf().requestFocus();
-            return false;
+            cpfError = true;
         }
+
+        if(activity.getEdcep().getText().toString().length() < 10){
+            activity.getEdcep().setError(activity.getString(R.string.cep_error));
+            activity.getEdcep().requestFocus();
+            cepError = true;
+        }else if(activity.getEdcep().getText().toString().isEmpty()){
+            activity.getEdcep().setError(activity.getString(R.string.error_invalid));
+            activity.getEdcep().requestFocus();
+            cepError = true;
+        }
+
+        if(activity.getEdtelefonecelular().getText().toString().isEmpty()){
+            activity.getEdtelefonecelular().setError(activity.getString(R.string.error_invalid));
+            activity.getEdtelefonecelular().requestFocus();
+            telefoneCelularError = true;
+        }
+
 
         if(!ValidationsForms.isEmail(activity.getEdemail().getText().toString())){
             activity.getEdemail().setError(activity.getString(R.string.error_invalid_email));
             activity.getEdemail().requestFocus();
-            return false;
+            emailError = true;
         }
 
 
-        if(nome && cpf && dataDeAniverssário){
-            return true;
-        }else {
+        if(nomeError || cpfError || dataDeAniverssárioError ||emailError || nacionalidadeError ||
+                cepError ||telefoneCelularError){
             return false;
+        }else {
+            return true;
         }
     }
 }
