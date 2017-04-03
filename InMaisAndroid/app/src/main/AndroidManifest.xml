@@ -186,6 +186,9 @@
         <activity
             android:name="itspay.br.com.activity.AlterarDadosPessoaisActivity"
             android:label="@string/title_dados_pessoais"
+            android:theme="@style/TemaFormularios" />
+        <activity android:name="itspay.br.com.activity.DadosParaCreditoActivity"
+            android:label="@string/title_dados_para_credito"
             android:theme="@style/TemaFormularios"/>
     </application>
 

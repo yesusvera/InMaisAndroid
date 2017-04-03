@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_10dp"
+    tools:context="itspay.br.com.fragment.ContasCadastradasFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10dp">
+
+        <TextView
+            android:id="@+id/tv_investment_bovespa_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/margin_2dp"
+            android:paddingTop="@dimen/margin_10dp"
+            android:text="Cartões Cadastrados"
+            android:textAllCaps="true"
+            android:textSize="@dimen/abc_text_size_14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Bandeira"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Número do Cartão"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Emissão"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Validade"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cartoes_cadastrados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_titulo"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        android:layout_above="@+id/trocar_email_button" />
+
+    <TextView
+        android:id="@+id/tv_erro_lista_vazia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_titulo"
+        android:layout_marginTop="5dp"
+        android:text="@string/error_lists_vazia"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/trocar_email_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_buton_in_app"
+        android:text="@string/action_solicitar_cartao_pre_pago"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_10dp"
+    tools:context="itspay.br.com.fragment.ContasCadastradasFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_investment_bovespa_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/margin_10dp"
+            android:paddingTop="@dimen/margin_10dp"
+            android:text="Contas Cadastradas"
+            android:textAllCaps="true"
+            android:textSize="@dimen/abc_text_size_14dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/ll_title"
+        android:id="@+id/ll_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Banco"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Agência"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Conta"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_contas_bancarias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_titulo"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:layout_above="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tv_erro_lista_vazia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_titulo"
+        android:layout_marginTop="5dp"
+        android:text="@string/error_lists_vazia"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Limite máximo de 4 contas"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        android:layout_above="@+id/trocar_email_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/textView5" />
+
+
+    <Button
+        android:id="@+id/trocar_email_button"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_buton_in_app"
+        android:text="@string/acao_adicionar_conta"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"/>
+
+</RelativeLayout>

@@ -25,7 +25,7 @@ public class AlterarDadosPessoaisController extends BaseActivityController<Alter
         activity.getEdtelefoneresidencial().addTextChangedListener(new MaskEditTextChangedListener("(##)####-####", activity.getEdtelefoneresidencial()));
         activity.getEdtelefonecelular().addTextChangedListener(new MaskEditTextChangedListener("(##)#####-####", activity.getEdtelefonecelular()));
 
-        Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEdcpf(), 14);
+        Utils.nextInputOnMaxLength(activity, activity.getEdcpf(),activity.getEddatanascimento(), 14);
         Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEddatanascimento(), 10);
         Utils.hideSoftKeyboardOnMaxLength(activity, activity.getEddatanascimento(), 10);
         Utils.hideSoftKeyboardOnMaxLength(activity,activity.getEdtelefonecelular(), 13);
