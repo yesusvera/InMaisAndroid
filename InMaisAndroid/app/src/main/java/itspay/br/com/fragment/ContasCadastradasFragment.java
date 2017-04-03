@@ -1,6 +1,7 @@
 package itspay.br.com.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,11 +9,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import itspay.br.com.activity.DadosBancariosActivity;
 import itspay.br.com.adapter.ContasCastradasAdapter;
 import itspay.br.com.itspay.R;
 import itspay.br.com.model.ContaBancaria;
@@ -24,6 +27,8 @@ public class ContasCadastradasFragment extends Fragment {
     ContasCastradasAdapter mAdapter;
     RecyclerView mRvContas;
     TextView mtvErroListaVazia;
+    Button btnSalvar;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,6 +37,7 @@ public class ContasCadastradasFragment extends Fragment {
          mView = inflater.inflate(R.layout.fragment_contas_cadastradas, container, false);
         mRvContas = (RecyclerView)mView.findViewById(R.id.rv_contas_bancarias);
         mtvErroListaVazia = (TextView)mView.findViewById(R.id.tv_erro_lista_vazia);
+        btnSalvar = (Button)mView.findViewById(R.id.trocar_email_button);
 
         List<ContaBancaria> contasBancarias= new ArrayList<ContaBancaria>();
 
@@ -54,6 +60,14 @@ public class ContasCadastradasFragment extends Fragment {
             mAdapter = new ContasCastradasAdapter(getContext(),contasBancarias);
             mRvContas.setAdapter(mAdapter);
         }
+
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DadosBancariosActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
 
         return mView;
     }
