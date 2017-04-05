@@ -32,10 +32,14 @@
     <string name="prompt_limpar_carrinho">Deseja limpar a lista completamente?</string>
     <string name="prompt_autorizar_compra">Deseja autorizar esta compra no valor de %1$s em %2$sx?</string>
     <string name="prompt_excluir_produto_carrinho">Deseja realmente retirar este produto do carrinho?</string>
-    <string name="prompt_confirma_notificar_perda">Deseja realmente informar a perda deste cartão.
+    <string name="prompt_confirma_notificar_perda">Deseja realmente informar a perda deste cartão.</string>
+    <string name="prompt_info_dados_bancarios">Declaro que os dados fornecidos estão corretos e conta para o crédito está ativa e é de minha responsabilidade.
+Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
+    <string name="prompt_conheca_in_mais">O InMais é o programa de fidelidade que te dá liberdade para você trocar seus pontos.</string>
+
+    <string name="prompt_confirma_notificar_roubo">Deseja realmente informar o roubo deste cartão-->.
                                                     \nEste cartão será cancelado e um novo cartão será emitido.</string>
-    <string name="prompt_confirma_notificar_roubo">Deseja realmente informar o roubo deste cartão.
-                                                    \nEste cartão será cancelado e um novo cartão será emitido.</string>
+
 
 
     <string name="label_sem_produtos_carrinho">Você não adicionou nenhum produto ao carrinho.</string>
@@ -322,6 +326,8 @@
     <string name="title_dados_para_credito">Dados Para Creditos</string>
     <string name="cep_error">CEP invalido</string>
     <string name="error_lists_vazia">Nenhum registro encontrado</string>
+    <string name="title_activity_dados_bancarios">Dados Bancários</string>
+    <string name="title_activity_conheca_in_mais">Conheça o InMais</string>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
 

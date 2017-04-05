@@ -53,6 +53,10 @@
             android:id="@+id/nav_fale_conosco"
             android:icon="@drawable/cart"
             android:title="Fale Conosco"/>
+        <item
+            android:id="@+id/nav_conheca_in_mais"
+            android:icon="@drawable/cart"
+            android:title="Conheça o InMais"/>
 
 
     </group>

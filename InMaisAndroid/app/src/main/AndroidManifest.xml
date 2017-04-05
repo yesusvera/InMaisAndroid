@@ -178,7 +178,7 @@
         <activity
             android:name="itspay.br.com.activity.FaleConoscoActivity"
             android:label="@string/title_fale_conosco"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.ExtratoActivity"
             android:label="@string/title_activity_extrato"
@@ -191,7 +191,14 @@
             android:name="itspay.br.com.activity.DadosParaCreditoActivity"
             android:label="@string/title_dados_para_credito"
             android:theme="@style/TemaFormularios" />
-        <activity android:name="itspay.br.com.activity.DadosBancariosActivity"></activity>
+        <activity
+            android:name="itspay.br.com.activity.DadosBancariosActivity"
+            android:label="@string/title_activity_dados_bancarios"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.ConhecaInMaisActivity"
+            android:label="@string/title_activity_conheca_in_mais"
+            android:theme="@style/TemaFormularios" />
     </application>
 
 </manifest>

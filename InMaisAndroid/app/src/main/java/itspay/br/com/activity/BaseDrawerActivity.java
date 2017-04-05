@@ -130,6 +130,9 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         } else if(id == R.id.nav_fale_conosco){
             Intent intent = new Intent(this, FaleConoscoActivity.class);
             startActivity(intent);
+        } else if(id == R.id.nav_conheca_in_mais){
+            Intent intent = new Intent(this, ConhecaInMaisActivity.class);
+            startActivity(intent);
         } else if(id == R.id.nav_logout){
             meusCartoesController.logout();
         }

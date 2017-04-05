@@ -77,13 +77,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
                 app:counterMaxLength="13">
 
                 <EditText
                     android:id="@+id/ed_conta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:hint="Conta"
                     android:textSize="14sp"
@@ -95,8 +95,8 @@
             <CheckBox android:id="@+id/chkx_termos_licenca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Declaro que os dados fornecidos estão corretos e cnta para o crédito está ativa e é de minha responsabilidade.
-Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta  "
+                android:text="@string/prompt_info_dados_bancarios"
+                android:layout_marginBottom="@dimen/margin_10dp"
                 android:onClick="onCheckboxClicked"/>
 
             <Button
@@ -104,11 +104,14 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta  "
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button"
+                android:background="@drawable/back_buton_in_app"
                 android:text="Salvar"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:layout_marginTop="20dp" />
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="40dp" />
 
         </LinearLayout>
 

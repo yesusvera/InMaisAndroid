@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="itspay.br.com.activity.FaleConoscoActivity">
     <ScrollView
         android:layout_width="match_parent"
@@ -91,21 +92,31 @@
             android:text="Sua Mensagem"
             android:textSize="14sp"
             android:textStyle="bold"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterMaxLength="13"
+                android:layout_alignParentLeft="true">
             <EditText
             android:id="@+id/ed_mensagem"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"/>
+            </android.support.design.widget.TextInputLayout>
             <Button
-            android:id="@+id/btn_salvar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Salvar"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
+                android:id="@+id/btn_salvar"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_buton_in_app"
+                android:text="Salvar"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="40dp" />
 
     </LinearLayout>
 
