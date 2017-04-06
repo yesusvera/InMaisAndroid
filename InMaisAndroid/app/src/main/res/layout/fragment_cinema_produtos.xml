@@ -47,8 +47,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/img_americanas"
@@ -59,7 +59,6 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/americanas" />
-
 
 
         <ImageView
@@ -99,6 +98,28 @@
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+
+        <Spinner
+            android:id="@+id/sp_americanas"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+
+        <Spinner
+            android:id="@+id/sp_cinemark"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
 
     </LinearLayout>
 
@@ -164,6 +185,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+
+        <Spinner
+            android:id="@+id/sp_cinemark"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+
+        <Spinner
+            android:id="@+id/sp_shoptime"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
         <ImageView
@@ -193,6 +236,29 @@
             android:text="Submarino - Crédito Voucher"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+
+        <Spinner
+            android:id="@+id/sp_submarino"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <Spinner
+            android:id="@+id/sp_submarino"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
 
 
     </LinearLayout>
