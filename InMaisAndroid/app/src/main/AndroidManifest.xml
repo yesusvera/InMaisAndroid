@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="itspay.br.com.activity.LoginActivity"
+            android:name="itspay.br.com.activity.VisaoGeralActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan">
@@ -159,10 +159,10 @@
             android:noHistory="true"
             android:theme="@style/TemaFormularios"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity
-            android:name="itspay.br.com.activity.VisaoGeralActivity"
-            android:label="@string/title_activity_visao_geral"
-            android:theme="@style/AppTheme" />
+        <!-- <activity -->
+        <!-- android:name="itspay.br.com.activity.VisaoGeralActivity" -->
+        <!-- android:label="@string/title_activity_visao_geral" -->
+        <!-- android:theme="@style/AppTheme" /> -->
         <activity
             android:name="itspay.br.com.activity.CadastroCliente1Activity"
             android:label="@string/title_activity_cadastro_cliente1"
@@ -199,6 +199,38 @@
             android:name="itspay.br.com.activity.ConhecaInMaisActivity"
             android:label="@string/title_activity_conheca_in_mais"
             android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.ResgateActivity"
+            android:label="@string/title_activity_resgate"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.DadosResgateCinemaProdutoActivity"
+            android:label="Dados Resgate Cinema e Produtos"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.DadosResgateCartaoPrePagoActivity"
+            android:label="Solicitação Cartão Pré-Pago"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.DadosResgateCreditoCartaoPrePagoActivity"
+            android:label="Crédito em Dinheiro"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.DadosResgateCreditoContaActivity"
+            android:label="Crédito em Conta"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.DadosResgateRecargaCelularActivity"
+            android:label="Recarga Celular"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.PontosVencerActivity"
+            android:label="Pontos a Vencer"
+            android:theme="@style/TemaFormularios" />
+        <activity
+            android:name="itspay.br.com.activity.UltimosLancamentosActivity"
+            android:label="Últimos Lançamentos"
+            android:theme="@style/TemaFormularios"/>
     </application>
 
 </manifest>

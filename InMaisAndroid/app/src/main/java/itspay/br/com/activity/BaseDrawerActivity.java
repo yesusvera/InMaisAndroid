@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.controller.BaseController;
 import itspay.br.com.itspay.R;
 import itspay.br.com.util.mask.MaskEditTextChangedListener;
@@ -89,7 +88,7 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
 
         mTvPoints.setText("100.800");
         mAccountItemListName.setText("Rodrigo Palmeira");
-        mItemCpf.setText(IdentityItsPay.getInstance().getLoginPortador().getCpf());
+//        mItemCpf.setText(IdentityItsPay.getInstance().getLoginPortador().getCpf());
 
     }
 
@@ -122,9 +121,9 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         }else if(id == R.id.nav_alterar_senha){
             Intent intent = new Intent(this, TrocarSenhaActivity.class);
             startActivity(intent);
-//        }  else if (id == R.id.nav_resgate) {
-//            Intent intent = new Intent(this, CartaoActivity.class);
-//            startActivity(intent);
+        }  else if (id == R.id.nav_resgate) {
+            Intent intent = new Intent(this, ResgateActivity.class);
+            startActivity(intent);
         }    else if(id == R.id.nav_shopping){
             abrirMarketPlace();
         } else if(id == R.id.nav_fale_conosco){
@@ -140,23 +139,6 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-
-    private void visaoGeral() {
-        if (this instanceof VisaoGeralActivity) {
-        }else{
-            Intent intent = new Intent(this, VisaoGeralActivity.class);
-            startActivity(intent);
-        }
-    }
-
-    private void extrato() {
-//        if (this instanceof ExtratoActivity) {
-//        }else {
-            Intent intent = new Intent(this, ExtratoActivity.class);
-            startActivity(intent);
-//        }
     }
 
     public int getmLayoutView() {

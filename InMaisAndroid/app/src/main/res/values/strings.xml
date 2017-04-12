@@ -115,6 +115,9 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="str_icone_logout">Logout</string>
     <string name="str_icone_visao_geral">Visão Geral</string>
     <string name="str_icone_acompanhar_resgate">Acompanhar Resgate</string>
+    <string name="str_icone_saldo_atual">Saldo Atual</string>
+    <string name="str_icone_pontos_vencer">Próximos Pontos a Vencer</string>
+    <string name="str_icone_ultimos_lancamentos">Últimos Lançamentos</string>
 
     <string name="texto_icone">Logout</string>
 
@@ -327,6 +330,7 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="error_lists_vazia">Nenhum registro encontrado</string>
     <string name="title_activity_dados_bancarios">Dados Bancários</string>
     <string name="title_activity_conheca_in_mais">Conheça o InMais</string>
+    <string name="title_activity_resgate">Resgate</string>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
 

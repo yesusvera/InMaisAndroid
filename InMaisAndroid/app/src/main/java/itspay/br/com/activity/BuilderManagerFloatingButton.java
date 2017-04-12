@@ -1,9 +1,6 @@
 package itspay.br.com.activity;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 
 import com.nightonke.boommenu.BoomButtons.HamButton;
 import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
@@ -23,7 +20,9 @@ public class BuilderManagerFloatingButton {
             R.drawable.menu_icon3,
             R.drawable.menu_icon4,
             R.drawable.menu_icon5,
-            R.drawable.menu_icon6
+            R.drawable.menu_icon6,
+            R.drawable.menu_icon4,
+            R.drawable.menu_icon4
     };
     public static int[] textResources = new int[]{
             R.string.str_icone_transferir,
@@ -31,7 +30,9 @@ public class BuilderManagerFloatingButton {
             R.string.str_icone_cartoes_virtuais,
             R.string.str_icone_ajustes_seguranca,
             R.string.str_icone_tarifas,
-            R.string.str_icone_logout
+            R.string.str_icone_logout,
+            R.string.str_icone_pontos_vencer,
+            R.string.str_icone_ultimos_lancamentos
     };
 
     public static int imageResourceIndex = 0;
@@ -50,12 +51,11 @@ public class BuilderManagerFloatingButton {
                 .normalImageRes(getImageResource());
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    static TextInsideCircleButton.Builder getTextInsideCircleButtonBuilder(Context context) {
+    static TextInsideCircleButton.Builder getTextInsideCircleButtonBuilder() {
         return new TextInsideCircleButton.Builder()
                 .normalImageRes(getImageResource())
                 .normalTextRes(getTextResource())
-                .pieceColor(Color.WHITE).normalColor(context.getColor(R.color.principal_color));
+                .pieceColor(Color.WHITE).normalColor(Color.parseColor("#ab772d"));
                 //.normalTextRes(R.string.texto_icone);
     }
 

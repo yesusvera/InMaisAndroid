@@ -5,10 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,12 +21,6 @@ import com.dexafree.materialList.card.OnActionClickListener;
 import com.dexafree.materialList.card.action.TextViewAction;
 import com.dexafree.materialList.listeners.RecyclerItemClickListener;
 import com.dexafree.materialList.view.MaterialListView;
-import com.nightonke.boommenu.BoomButtons.BoomButton;
-import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
-import com.nightonke.boommenu.BoomMenuButton;
-import com.nightonke.boommenu.ButtonEnum;
-import com.nightonke.boommenu.OnBoomListener;
-import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -38,7 +30,6 @@ import java.util.Locale;
 
 import itspay.br.com.authentication.IdentityItsPay;
 import itspay.br.com.controller.CartaoController;
-import itspay.br.com.controller.MeusCartoesController;
 import itspay.br.com.itspay.R;
 import itspay.br.com.model.Credencial;
 import itspay.br.com.model.LinhaExtratoCredencial;
@@ -105,8 +96,15 @@ public class CartaoActivity extends AppCompatActivity {
 //        bmb = (BoomMenuButton) findViewById(R.id.bmb);
 //        assert bmb != null;
 //        bmb.setButtonEnum(ButtonEnum.TextInsideCircle);
-//        if(credencialDetalhe.getIdProdutoPlataforma()==2 || credencialDetalhe.getIdProdutoPlataforma()==3){
-//            BuilderManagerFloatingButton.imageResourceIndex = 0;
+//
+//
+//
+//     if(credencialDetalhe.getIdProdutoPlataforma()==2 || credencialDetalhe.getIdProdutoPlataforma()==3){
+//
+//
+//
+//
+// BuilderManagerFloatingButton.imageResourceIndex = 0;
 //            BuilderManagerFloatingButton.imageResources = new int[]{
 //                    R.drawable.menu_icon4,
 //                    R.drawable.menu_icon6
@@ -117,6 +115,12 @@ public class CartaoActivity extends AppCompatActivity {
 //            };
 //            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_2_1);
 //            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_2_1);
+
+
+
+
+
+
 //        }else if(credencialDetalhe.getIdProdutoPlataforma()==4){
 //            BuilderManagerFloatingButton.imageResourceIndex = 0;
 //            BuilderManagerFloatingButton.imageResources = new int[]{
@@ -132,7 +136,38 @@ public class CartaoActivity extends AppCompatActivity {
 //            };
 //            bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_3_1);
 //            bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_3_1);
-//        }else{
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// }else{
 //            BuilderManagerFloatingButton.imageResourceIndex = 0;
 //            BuilderManagerFloatingButton.imageResources = new int[]{
 //                    R.drawable.menu_icon1,
@@ -156,7 +191,14 @@ public class CartaoActivity extends AppCompatActivity {
 //
 //        bmb.setNormalColor(Color.parseColor("#00273f"));
 //
-//        for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
+//
+//
+//
+//
+//
+//
+//
+// for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
 //            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 //                bmb.addBuilder(BuilderManagerFloatingButton.getTextInsideCircleButtonBuilder(getApplicationContext()));
 //            }

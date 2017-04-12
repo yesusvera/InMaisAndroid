@@ -4,17 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="itspay.br.com.activity.DadosParaCreditoActivity">
-    <LinearLayout
+    tools:context="itspay.br.com.activity.ResgateActivity">
+
+    <FrameLayout
+        android:id="@+id/ll_investments_viewpager_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <FrameLayout
-            android:id="@+id/ll_investments_viewpager_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:visibility="visible">
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <itspay.br.com.util.viewpage.CustomViewPage
             android:id="@+id/vp_itens"
@@ -29,6 +26,6 @@
             android:layout_gravity="bottom"
             app:fillColor="@color/bgContentTop"
             android:padding="10dp" />
-        </FrameLayout>
-    </LinearLayout>
+    </FrameLayout>
+
 </RelativeLayout>
