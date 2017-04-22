@@ -37,8 +37,8 @@ public abstract class ConnectPortadorService {
 
             Retrofit retrofit = new Retrofit.Builder()
 //                    .baseUrl("http://tst.inmais.itspay.com.br")
-//                    .baseUrl("http://tst.api.itspayspay.com.br/api/")
-                    .baseUrl("https://bahamascard.itspay.com.br/api/")
+                    .baseUrl("http://tst.api.itspay.com.br/api/")
+//                    .baseUrl("https://bahamascard.itspay.com.br/api/")
 //                    .client(client)
                     .client(client)
                     .addConverterFactory(GsonConverterFactory.create())

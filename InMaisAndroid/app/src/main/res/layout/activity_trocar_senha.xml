@@ -82,10 +82,12 @@
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/back_button_itspay"
+            android:background="@drawable/back_buton_in_app"
             android:text="@string/action_trocar_senha"
-            android:textColor="@android:color/background_light"
+            android:textColor="@color/bgContent"
             android:textStyle="bold"
             android:layout_marginTop="20dp" />
+
+
     </LinearLayout>
 </RelativeLayout>

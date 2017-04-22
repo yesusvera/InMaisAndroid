@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="itspay.br.com.fragment.CreditoDinheiroFragment">
+    tools:context="itspay.br.com.fragment.CartaoPrePagoFragment">
 
 
     <RelativeLayout
@@ -44,10 +44,9 @@
     </RelativeLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
         <ImageView
@@ -61,6 +60,35 @@
             android:background="@drawable/banpara" />
 
 
+        <TextView
+            android:id="@+id/txt_banpara"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cartão Pré-Pago Banpará"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/sp_banpara"
+            android:layout_alignLeft="@+id/img_banpara"
+            android:layout_alignStart="@+id/img_banpara"
+            android:layout_marginLeft="64dp"
+            android:layout_marginStart="64dp" />
+
+        <Spinner
+            android:id="@+id/sp_banpara"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_alignTop="@+id/img_banpara"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp">
 
         <ImageView
             android:id="@+id/img_cabal"
@@ -72,24 +100,6 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/cabal" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-        <TextView
-            android:id="@+id/txt_banpara"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Cartão Pré-Pago Banpará"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
         <TextView
             android:id="@+id/txt_cabal"
             android:layout_width="match_parent"
@@ -97,38 +107,29 @@
             android:layout_weight="1"
             android:text="Cartão Pré-Pago CABAL"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
-
-        <Spinner
-            android:id="@+id/sp_banpara"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="50dp" />
-
+            android:layout_alignTop="@+id/sp_cabal"
+            android:layout_alignLeft="@+id/img_cabal"
+            android:layout_alignStart="@+id/img_cabal"
+            android:layout_marginLeft="64dp"
+            android:layout_marginStart="64dp"/>
 
         <Spinner
             android:id="@+id/sp_cabal"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_height="50dp" />
+            android:layout_alignTop="@+id/img_cabal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
         <ImageView
@@ -141,15 +142,6 @@
             android:layout_marginTop="5dp"
             android:background="@drawable/visa" />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
         <TextView
             android:id="@+id/txt_visa"
             android:layout_width="match_parent"
@@ -157,35 +149,25 @@
             android:layout_height="wrap_content"
             android:text="Cartão Pré-Pago VISA"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp">
-
+            android:layout_alignTop="@+id/sp_visa"
+            android:layout_alignLeft="@+id/img_visa"
+            android:layout_alignStart="@+id/img_visa"
+            android:layout_marginLeft="64dp"
+            android:layout_marginStart="64dp"/>
 
         <Spinner
             android:id="@+id/sp_visa"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp" />
-
-        <Spinner
-            android:id="@+id/sp_visa"
-            android:layout_weight="1"
-            android:visibility="invisible"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_alignTop="@+id/img_visa"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
 
+    </RelativeLayout>
 
 
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
