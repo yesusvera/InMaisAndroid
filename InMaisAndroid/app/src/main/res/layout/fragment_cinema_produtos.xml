@@ -80,20 +80,12 @@
                         android:layout_height="wrap_content"
                         android:text="Americanas - Crédito Voucher"
                         android:textStyle="bold"
-                        android:layout_alignTop="@+id/sp_americanas"
                         android:layout_alignLeft="@+id/img_americanas"
                         android:layout_alignStart="@+id/img_americanas"
                         android:layout_marginLeft="64dp"
                         android:layout_marginStart="64dp" />
 
-                    <Spinner
-                        android:id="@+id/sp_americanas"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:layout_alignTop="@+id/img_americanas"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
+
 
 
                 </RelativeLayout>
@@ -120,20 +112,12 @@
                         android:layout_weight="1"
                         android:text="CINEMARK - Par de Ingresso - Supersaver Padrão"
                         android:textStyle="bold"
-                        android:layout_alignTop="@+id/sp_cinemark"
                         android:layout_alignLeft="@+id/img_cinemark"
                         android:layout_alignStart="@+id/img_cinemark"
                         android:layout_marginLeft="64dp"
                         android:layout_marginStart="64dp"/>
 
-                    <Spinner
-                        android:id="@+id/sp_cinemark"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:layout_alignTop="@+id/img_cinemark"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
+
 
 
                 </RelativeLayout>
@@ -162,20 +146,12 @@
                         android:layout_height="wrap_content"
                         android:text="CINEMARK - Supersaver Padrão"
                         android:textStyle="bold"
-                        android:layout_alignTop="@+id/sp_cinemark_padrao"
                         android:layout_alignLeft="@+id/img_cinemark_padrao"
                         android:layout_alignStart="@+id/img_cinemark_padrao"
                         android:layout_marginLeft="64dp"
                         android:layout_marginStart="64dp"/>
 
-                    <Spinner
-                        android:id="@+id/sp_cinemark_padrao"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:layout_alignTop="@+id/img_cinemark_padrao"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"/>
+
 
 
                 </RelativeLayout>
@@ -202,20 +178,12 @@
                         android:layout_height="wrap_content"
                         android:text="Shoptime - Crédito Voucher"
                         android:textStyle="bold"
-                        android:layout_alignTop="@+id/sp_shoptime"
                         android:layout_alignLeft="@+id/img_shoptime"
                         android:layout_alignStart="@+id/img_shoptime"
                         android:layout_marginLeft="64dp"
                         android:layout_marginStart="64dp"/>
 
-                    <Spinner
-                        android:id="@+id/sp_shoptime"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:layout_alignTop="@+id/img_shoptime"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"/>
+
 
 
                 </RelativeLayout>
@@ -242,47 +210,39 @@
                         android:layout_height="wrap_content"
                         android:text="Submarino - Crédito Voucher"
                         android:textStyle="bold"
-                        android:layout_alignTop="@+id/sp_submarino"
                         android:layout_alignLeft="@+id/img_submarino"
                         android:layout_alignStart="@+id/img_submarino"
                         android:layout_marginLeft="64dp"
                         android:layout_marginStart="64dp"/>
 
-                    <Spinner
-                        android:id="@+id/sp_submarino"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        android:layout_alignTop="@+id/img_submarino"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"/>
+
 
 
                 </RelativeLayout>
 
 
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="8dp">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:paddingTop="8dp">-->
 
-                    <Button
-                        android:id="@+id/btn_confirmar"
-                        style="?android:textAppearanceSmall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/back_buton_in_app"
-                        android:text="Confirmar"
-                        android:textColor="@android:color/background_light"
-                        android:textStyle="bold"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginBottom="40dp" />
+                    <!--<Button-->
+                        <!--android:id="@+id/btn_confirmar"-->
+                        <!--style="?android:textAppearanceSmall"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/back_buton_in_app"-->
+                        <!--android:text="Confirmar"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:layout_marginBottom="40dp" />-->
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
 
             </LinearLayout>

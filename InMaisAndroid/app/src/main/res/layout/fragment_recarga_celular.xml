@@ -73,20 +73,12 @@
                     android:layout_height="wrap_content"
                     android:text="Recarga Claro"
                     android:textStyle="bold"
-                    android:layout_alignTop="@+id/sp_claro"
                     android:layout_alignLeft="@+id/img_claro"
                     android:layout_alignStart="@+id/img_claro"
                     android:layout_marginLeft="64dp"
                     android:layout_marginStart="64dp"/>
 
-                <Spinner
-                    android:id="@+id/sp_claro"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:layout_alignTop="@+id/img_claro"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
+
 
 
             </RelativeLayout>
@@ -113,20 +105,12 @@
                     android:layout_height="wrap_content"
                     android:text="Recarga Nextel"
                     android:textStyle="bold"
-                    android:layout_alignTop="@+id/sp_nextel"
                     android:layout_alignLeft="@+id/img_nextel"
                     android:layout_alignStart="@+id/img_nextel"
                     android:layout_marginLeft="64dp"
                     android:layout_marginStart="64dp"/>
 
-                <Spinner
-                    android:id="@+id/sp_nextel"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:layout_alignTop="@+id/img_nextel"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
+
 
 
             </RelativeLayout>
@@ -153,20 +137,12 @@
                     android:layout_height="wrap_content"
                     android:text="Recarga Oi"
                     android:textStyle="bold"
-                    android:layout_alignTop="@+id/sp_oi"
                     android:layout_alignLeft="@+id/img_oi"
                     android:layout_alignStart="@+id/img_oi"
                     android:layout_marginLeft="64dp"
                     android:layout_marginStart="64dp"/>
 
-                <Spinner
-                    android:id="@+id/sp_oi"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:layout_alignTop="@+id/img_oi"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
+
 
 
             </RelativeLayout>
@@ -193,20 +169,12 @@
                     android:layout_height="wrap_content"
                     android:text="Recarga Tim"
                     android:textStyle="bold"
-                    android:layout_alignTop="@+id/sp_tim"
                     android:layout_alignLeft="@+id/img_tim"
                     android:layout_alignStart="@+id/img_tim"
                     android:layout_marginLeft="64dp"
                     android:layout_marginStart="64dp"/>
 
-                <Spinner
-                    android:id="@+id/sp_tim"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:layout_alignTop="@+id/img_tim"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
+
 
 
             </RelativeLayout>
@@ -233,46 +201,38 @@
                     android:layout_height="wrap_content"
                     android:text="Recarga Vivo"
                     android:textStyle="bold"
-                    android:layout_alignTop="@+id/sp_vivo"
                     android:layout_alignLeft="@+id/img_vivo"
                     android:layout_alignStart="@+id/img_vivo"
                     android:layout_marginLeft="64dp"
                     android:layout_marginStart="64dp"/>
 
-                <Spinner
-                    android:id="@+id/sp_vivo"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:layout_alignTop="@+id/img_vivo"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"/>
+
 
 
             </RelativeLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="8dp">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="8dp">-->
 
-                <Button
-                    android:id="@+id/btn_confirmar"
-                    style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/back_buton_in_app"
-                    android:text="Confirmar"
-                    android:textColor="@android:color/background_light"
-                    android:textStyle="bold"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="40dp" />
+                <!--<Button-->
+                    <!--android:id="@+id/btn_confirmar"-->
+                    <!--style="?android:textAppearanceSmall"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/back_buton_in_app"-->
+                    <!--android:text="Confirmar"-->
+                    <!--android:textColor="@android:color/background_light"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_marginBottom="40dp" />-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
         </LinearLayout>
 
