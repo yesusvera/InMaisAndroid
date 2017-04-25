@@ -61,7 +61,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name="itspay.br.com.activity.CartaoActivity"
-            android:label="@string/title_activity_cartao"
+            android:label="Extrato"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity

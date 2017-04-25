@@ -2,24 +2,78 @@ package itspay.br.com.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.nightonke.boommenu.BoomMenuButton;
+import android.view.View;
+import android.widget.TextView;
 
 import itspay.br.com.itspay.R;
 
 public class VisaoGeralActivity extends BaseDrawerActivity {
 
-    private BoomMenuButton bmb;
+//    private BoomMenuButton bmb;
+    private TextView txtAtualizarCadastro;
+    private TextView txtVerExtratoSaldo;
+    private TextView txtVerExtratoCreditos;
+    private TextView txtPontosVencer;
+    private TextView txtVerExtratoResgate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setLayoutView(R.layout.activity_visao_geral);
         super.onCreate(savedInstanceState);
-        posServico();
+//        posServico();
+
+        txtAtualizarCadastro = (TextView) findViewById(R.id.tx_atualizar_castro);
+        txtVerExtratoSaldo = (TextView) findViewById(R.id.txt_ver_extrato_saldo);
+        txtVerExtratoCreditos = (TextView) findViewById(R.id.txt_ver_extrato_creditos);
+        txtPontosVencer = (TextView) findViewById(R.id.txt_ver_pontos_vencer);
+        txtVerExtratoResgate = (TextView) findViewById(R.id.txt_ver_resgate);
+
+
+        txtAtualizarCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AlterarDadosPessoaisActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtVerExtratoSaldo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtVerExtratoCreditos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtPontosVencer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtVerExtratoResgate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ResgateActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
-    public void posServico(){
+//    public void posServico(){
 
 //        bmb = (BoomMenuButton) findViewById(R.id.bmb);
 //        assert bmb != null;
@@ -92,19 +146,19 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
 //            }
 //        });
 
-    }
+//    }
 
-    private void ultimosLancamentos() {
-
-        Intent intent = new Intent(getBaseContext(), UltimosLancamentosActivity.class);
-        startActivity(intent);
-    }
-
-
-
-    private void verificarPontosVencer() {
-
-        Intent intent = new Intent(getBaseContext(), PontosVencerActivity.class);
-        startActivity(intent);
-    }
+//    private void ultimosLancamentos() {
+//
+//        Intent intent = new Intent(getBaseContext(), UltimosLancamentosActivity.class);
+//        startActivity(intent);
+//    }
+//
+//
+//
+//    private void verificarPontosVencer() {
+//
+//        Intent intent = new Intent(getBaseContext(), PontosVencerActivity.class);
+//        startActivity(intent);
+//    }
 }

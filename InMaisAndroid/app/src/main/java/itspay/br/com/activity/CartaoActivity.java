@@ -65,7 +65,7 @@ public class CartaoActivity extends AppCompatActivity {
 
     public void posServico(){
 
-        setTitle("Cartão " + credencialDetalhe.getNomeProduto() + " - " + credencialDetalhe.getCredencialUltimosDigitos());
+//        setTitle("Cartão " + credencialDetalhe.getNomeProduto() + " - " + credencialDetalhe.getCredencialUltimosDigitos());
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
