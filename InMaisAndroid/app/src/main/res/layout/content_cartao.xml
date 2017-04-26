@@ -16,23 +16,25 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/principal_color"
-        android:paddingLeft="50dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp">
 
             <TextView
                 android:id="@+id/txt_saldo_atual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="Saldo:"
                 android:textColor="@color/bgContent"
                 android:textSize="20sp"
@@ -42,7 +44,8 @@
                 android:id="@+id/txt_saldo_atual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="1.16"
+                android:gravity="left"
                 android:text="9.847"
                 android:textColor="@color/bgContent"
                 android:textSize="20sp"
@@ -53,13 +56,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/txt_ver_extrato_saldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Pontos a Vencer:"
                 android:textColor="@color/bgContent"
                 android:textSize="15sp"
@@ -70,6 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:text="Seus pontos não vencem"
                 android:textColor="@color/bgContent"
                 android:textSize="15sp"
@@ -77,9 +83,48 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/linear_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/bgContent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_weight="1.25">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="149dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tipo:"
+                    android:textAllCaps="true"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/list_tipo"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
 
 
     <android.support.v4.widget.SwipeRefreshLayout

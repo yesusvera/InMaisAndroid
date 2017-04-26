@@ -24,6 +24,7 @@
         <item name="colorPrimaryDark">#d76e2c</item>
         <item name="colorAccent">#d76e2c</item>
 
+
         <!--Financial
         <item name="colorPrimary">#EF3D3C</item>
         <item name="colorPrimaryDark">@android:color/white</item>
@@ -45,6 +46,12 @@
         <item name="android:src">@mipmap/ic_launch_in_mais</item>
         <!-- <item name="android:src">@mipmap/ic_launch_financial</item>-->
     </style>
+
+    <style name="mySpinnerItemStyle" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/txt_color_black</item>
+    </style>
+
+
 
 
     <!-- ###################### ############################# ####################################-->

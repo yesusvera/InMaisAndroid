@@ -213,6 +213,19 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
         <item>Outros</item>
     </string-array>
 
+    <string-array name="list_tipo">
+        <item>TODOS</item>
+        <item>ACUMULADO</item>
+        <item>AJUSTADO</item>
+        <item>BONIFICADO</item>
+        <item>CANCELADO</item>
+        <item>BESTORNADO</item>
+        <item>EXPIRADO</item>
+        <item>RESGATADO</item>
+        <item>RESGATE TRANSFERIDO</item>
+        <item>TRANSFERIDO</item>
+    </string-array>
+
 
     <string-array name="list_estado_civil">
         <item>Solteiro(a)</item>
