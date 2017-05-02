@@ -96,64 +96,66 @@
                 android:layout_height="1dp"
                 android:background="@color/bgContentTop" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_10dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/prompt_cpf"
-                        android:textColor="@color/txt_color_black"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:text="041.289.461-09" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/tx_telefone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/linearLayout2"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:paddingLeft="5dp"
-                    android:text="(61)995421414" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/tx_telefone"
-                    android:layout_toLeftOf="@+id/tx_telefone"
-                    android:layout_toStartOf="@+id/tx_telefone"
-                    android:text="@string/prompt_tel"
-                    android:textColor="@color/txt_color_black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/linear_atualizar_cadastro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="@dimen/margin_10dp"
                 android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prompt_cpf"
+                            android:textColor="@color/txt_color_black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="041.289.461-09" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tx_telefone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/linearLayout2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:paddingLeft="5dp"
+                        android:text="(61)995421414" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tx_telefone"
+                        android:layout_toLeftOf="@+id/tx_telefone"
+                        android:layout_toStartOf="@+id/tx_telefone"
+                        android:text="@string/prompt_tel"
+                        android:textColor="@color/txt_color_black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
 
                 <LinearLayout
                     android:id="@+id/linearLayout3"
@@ -206,21 +208,21 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/tx_atualizar_castro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/linearLayout3"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginRight="15dp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="16dp"
-                    android:text="Atualizar Cadastro"
-                    android:textColor="@color/principal_color"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
+                <!--<TextView-->
+                <!--android:id="@+id/tx_atualizar_castro"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignBottom="@+id/linearLayout3"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginEnd="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="16dp"-->
+                <!--android:text="Atualizar Cadastro"-->
+                <!--android:textColor="@color/principal_color"-->
+                <!--android:textSize="14dp"-->
+                <!--android:textStyle="bold" />-->
             </LinearLayout>
 
             <View
@@ -229,6 +231,7 @@
                 android:background="@color/bgContentTop" />
 
             <LinearLayout
+                android:id="@+id/linear_extrato_saldo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -236,55 +239,33 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
+
+                <TextView
+                    android:id="@+id/txt_saldo_atual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Seu Saldo Atual"
+                    android:textColor="@color/principal_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <LinearLayout
-                    android:id="@+id/linear_extrato_saldo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txt_saldo_atual"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Seu Saldo Atual"
-                        android:textColor="@color/principal_color"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
 
-                    <!--<TextView-->
-                        <!--android:id="@+id/txt_ver_extrato_saldo"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1"-->
-                        <!--android:gravity="right"-->
-                        <!--android:text="Ver Extrato"-->
-                        <!--android:textColor="@color/principal_color"-->
-                        <!--android:textSize="18sp"-->
-                        <!--android:textStyle="bold" />-->
-
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="@string/prompt_pontos"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tx_ponots_ultimos_creditos"
+                        android:id="@+id/tx_pontos_ultimos_creditos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/linearLayout3"
@@ -294,8 +275,9 @@
                         android:layout_marginRight="15dp"
                         android:paddingLeft="5dp"
                         android:text="151.994" />
-
                 </LinearLayout>
+
+
             </LinearLayout>
 
             <Space
@@ -303,6 +285,7 @@
                 android:layout_height="10dp" />
 
             <LinearLayout
+                android:id="@+id/linear_ultimos_creditos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -310,46 +293,27 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
+
+                <TextView
+                    android:id="@+id/txt_ultimos_creditos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prompt_ultimos_creditos"
+                    android:textColor="@color/principal_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
                 <LinearLayout
-                    android:id="@+id/linear_ultimos_creditos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/txt_ultimos_creditos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/prompt_ultimos_creditos"
-                        android:textColor="@color/principal_color"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
 
-                    <!--<TextView-->
-                        <!--android:id="@+id/txt_ver_extrato_creditos"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1"-->
-                        <!--android:gravity="right"-->
-                        <!--android:text="Ver Extrato"-->
-                        <!--android:textColor="@color/principal_color"-->
-                        <!--android:textSize="18sp"-->
-                        <!--android:textStyle="bold" />-->
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="Data"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
@@ -377,9 +341,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="@string/prompt_parceiro"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
@@ -407,9 +368,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="@string/prompt_pontos"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
@@ -436,6 +394,7 @@
                 android:layout_height="10dp" />
 
             <LinearLayout
+                android:id="@+id/linear_pontos_vencer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -443,53 +402,26 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <LinearLayout
-                    android:id="@+id/linear_pontos_vencer"
-                    android:layout_width="match_parent"
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:text="Próximos Pontos a Vencer"
+                    android:textColor="@color/principal_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Próximos Pontos a Vencer"
-                        android:textColor="@color/principal_color"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/txt_ver_pontos_vencer"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1"-->
-                        <!--android:gravity="right"-->
-                        <!--android:text="Ver Todos"-->
-                        <!--android:textColor="@color/principal_color"-->
-                        <!--android:textSize="18sp"-->
-                        <!--android:textStyle="bold" />-->
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="5dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
-                        android:text="Seus Pontos Não Vencem"
-                        android:textColor="@color/txt_color_black"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
+                    android:layout_alignTop="@+id/tx_datanascimento"
+                    android:layout_toLeftOf="@+id/tx_datanascimento"
+                    android:layout_toStartOf="@+id/tx_datanascimento"
+                    android:text="Seus Pontos Não Vencem"
+                    android:textColor="@color/txt_color_black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -507,32 +439,15 @@
                 android:orientation="vertical"
                 android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:text="@string/prompt_ultimos_resgates"
+                    android:textColor="@color/principal_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/prompt_ultimos_resgates"
-                        android:textColor="@color/principal_color"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/txt_ver_resgate"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1"-->
-                        <!--android:gravity="right"-->
-                        <!--android:text="Resgatar"-->
-                        <!--android:textColor="@color/principal_color"-->
-                        <!--android:textSize="18sp"-->
-                        <!--android:textStyle="bold" />-->
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -541,9 +456,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="Data"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
@@ -571,9 +483,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
+
                         android:text="@string/prompt_parceiro"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"
@@ -601,9 +511,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/tx_datanascimento"
-                        android:layout_toLeftOf="@+id/tx_datanascimento"
-                        android:layout_toStartOf="@+id/tx_datanascimento"
                         android:text="@string/prompt_pontos"
                         android:textColor="@color/txt_color_black"
                         android:textSize="15sp"

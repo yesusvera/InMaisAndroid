@@ -75,7 +75,7 @@
                         android:inputType="number"
                         android:maxLines="1"
                         android:padding="15dp"
-                        android:text="160.406.958-97" />
+                        android:text="068.956.280-29" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -100,7 +100,7 @@
                             android:maxLength="30"
                             android:maxLines="1"
                             android:padding="15dp"
-                            android:text="abcd1234" />
+                            android:text="123" />
 
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>

@@ -1,5 +1,7 @@
 package itspay.br.com.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,164 +12,89 @@ import itspay.br.com.itspay.R;
 
 public class VisaoGeralActivity extends BaseDrawerActivity {
 
-//    private BoomMenuButton bmb;
-    private TextView txtAtualizarCadastro;
+    //    private BoomMenuButton bmb;
+//    private TextView txtAtualizarCadastro;
     private LinearLayout linearExtratoSaldo;
     private LinearLayout linearUltimosResgates;
     private LinearLayout linearUltimosCreditos;
     private LinearLayout linearPontosVencer;
+    private LinearLayout linearAtualizarCadastro;
+
+
+    View.OnClickListener irTelaExtratoListener = new View.OnClickListener()
+
+    {
+        @Override
+        public void onClick(View v) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(VisaoGeralActivity.this);
+            builder.setMessage(getString(R.string.confirmacao_ir_saldo_extrato))
+                    .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Não", null);
+            builder.create().show();
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setLayoutView(R.layout.activity_visao_geral);
         super.onCreate(savedInstanceState);
-//        posServico();
 
-        txtAtualizarCadastro = (TextView) findViewById(R.id.tx_atualizar_castro);
+        linearAtualizarCadastro = (LinearLayout) findViewById(R.id.linear_atualizar_cadastro);
         linearExtratoSaldo = (LinearLayout) findViewById(R.id.linear_extrato_saldo);
         linearUltimosCreditos = (LinearLayout) findViewById(R.id.linear_ultimos_creditos);
         linearPontosVencer = (LinearLayout) findViewById(R.id.linear_pontos_vencer);
         linearUltimosResgates = (LinearLayout) findViewById(R.id.linear_ultimos_resgates);
 
 
-        txtAtualizarCadastro.setOnClickListener(new View.OnClickListener() {
+        linearAtualizarCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AlterarDadosPessoaisActivity.class);
-                startActivity(intent);
+                AlertDialog.Builder builder = new AlertDialog.Builder(VisaoGeralActivity.this);
+                builder.setMessage(getString(R.string.confirmacao_ir_editar_cadastro))
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent intent = new Intent(getApplicationContext(), AlterarDadosPessoaisActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("Não", null);
+                builder.create().show();
             }
         });
 
-//        txtVerExtratoSaldo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        linearExtratoSaldo.setOnClickListener(irTelaExtratoListener);
+        linearUltimosCreditos.setOnClickListener(irTelaExtratoListener);
+        linearPontosVencer.setOnClickListener(irTelaExtratoListener);
 
-        linearExtratoSaldo.setOnClickListener(new View.OnClickListener() {
+        linearUltimosResgates.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
-                startActivity(intent);
+                AlertDialog.Builder builder = new AlertDialog.Builder(VisaoGeralActivity.this);
+                builder.setMessage(getString(R.string.confirmacao_ir_ultimos_resgates))
+                        .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                Intent intent = new Intent(getApplicationContext(), ResgateActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("Não", null);
+                builder.create().show();
             }
         });
-
-        linearUltimosCreditos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        linearPontosVencer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        linearUltimosResgates.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ResgateActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
 
     }
 
-//    public void posServico(){
-
-//        bmb = (BoomMenuButton) findViewById(R.id.bmb);
-//        assert bmb != null;
-//        bmb.setButtonEnum(ButtonEnum.TextInsideCircle);
-//
-//        BuilderManagerFloatingButton.imageResourceIndex = 0;
-//        BuilderManagerFloatingButton.imageResources = new int[]{
-//                R.drawable.menu_icon4,
-//                R.drawable.menu_icon4
-//
-//        };
-//        BuilderManagerFloatingButton.textResources = new int[]{
-//                R.string.str_icone_pontos_vencer,
-//                R.string.str_icone_ultimos_lancamentos
-//
-//
-//        };
-//
-//        bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_2_2);
-//        bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_2_2);
-//
-//         for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++)
-//
-//                bmb.addBuilder(BuilderManagerFloatingButton.getTextInsideCircleButtonBuilder());
-//
-//
-//
-//
-//        bmb.setOnBoomListener(new OnBoomListener() {
-//            @Override
-//            public void onClicked(int index, BoomButton boomButton) {
-//                int strSelectedResource = BuilderManagerFloatingButton.textResources[index];
-//
-//                switch(strSelectedResource){
-//                    case R.string.str_icone_pontos_vencer : verificarPontosVencer(); break;
-//                    case R.string.str_icone_ultimos_lancamentos : ultimosLancamentos(); break;
-////                    case R.string.str_icone_inserir_carga : inserirCarga(); break;
-////                    case R.string.str_icone_cartoes_virtuais : cartoesVirtuais(); break;
-////                    case R.string.str_icone_ajustes_seguranca : ajustesDeSeguranca(); break;
-////                    case R.string.str_icone_tarifas : tarifas(); break;
-////
-//                }
-//            }
-//
-//
-//
-//            @Override
-//            public void onBackgroundClick() {
-//
-//            }
-//
-//            @Override
-//            public void onBoomWillHide() {
-//
-//            }
-//
-//            @Override
-//            public void onBoomDidHide() {
-//
-//            }
-//
-//            @Override
-//            public void onBoomWillShow() {
-//
-//            }
-//
-//            @Override
-//            public void onBoomDidShow() {
-//
-//            }
-//        });
-
-//    }
-
-//    private void ultimosLancamentos() {
-//
-//        Intent intent = new Intent(getBaseContext(), UltimosLancamentosActivity.class);
-//        startActivity(intent);
-//    }
-//
-//
-//
-//    private void verificarPontosVencer() {
-//
-//        Intent intent = new Intent(getBaseContext(), PontosVencerActivity.class);
-//        startActivity(intent);
-//    }
 }

@@ -57,6 +57,13 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="titulo_meus_pedidos">Pedidos</string>
     <string name="titulo_carrinho">Carrinho</string>
 
+    <string name="titulo_tab_dinheiro">Crédito em Dinheiro</string>
+    <string name="titulo_tab_celular">Recarga de Celular</string>
+    <string name="titulo_tab_cinema">Cinema</string>
+    <string name="titulo_tab_cartao">Cartão</string>
+
+
+
     <string name="acao_criar_login">Criar Login</string>
     <string name="acao_transferir">Transferir</string>
     <string name="acao_gerar_boleto">Gerar Boleto</string>
@@ -128,6 +135,7 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="mensagem_sem_internet">Aconteceu uma falha na comunicação. Verifique sua rede.</string>
     <string name="mensagem_confirmacao_transf">Confirma esta transferência?</string>
     <string name="mensagem_sessao_expirou">A sessão expirou.</string>
+
     <string name="mensagem_confirma_alteracao_bloqueio">Confirma a alteração do estado do bloqueio?</string>
     <string name="mensagem_timeout">A rede está lenta. Verifique sua conexão.</string>
     <string name="mensagem_sem_movimentacao">Sem movimentos neste Período.</string>
@@ -146,6 +154,10 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
 
     <string name="title_activity_trocar_senha">TrocarSenhaActivity</string>
     <string name="title_activity_cartao">Cartão</string>
+
+    <string name="confirmacao_ir_editar_cadastro">Deseja editar seu cadastro?</string>
+    <string name="confirmacao_ir_saldo_extrato">Deseja visualizar seu extrato completo?</string>
+    <string name="confirmacao_ir_ultimos_resgates">Deseja visualizar seus resgates?</string>
 
     <string-array name="planets">
         <item>Mercury</item>

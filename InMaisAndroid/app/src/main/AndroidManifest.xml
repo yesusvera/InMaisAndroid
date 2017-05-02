@@ -202,7 +202,7 @@
         <activity
             android:name="itspay.br.com.activity.ResgateActivity"
             android:label="@string/title_activity_resgate"
-            android:theme="@style/TemaFormularios" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCinemaProdutoActivity"
             android:label="Dados Resgate Cinema e Produtos"
