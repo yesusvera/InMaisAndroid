@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_weight="6"
-        android:background="@color/azul_bahamas"
+        android:background="@color/principal_color"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="5dp"
@@ -54,7 +54,7 @@
             android:paddingRight="8dp"
             android:paddingLeft="5dp"
             android:src="@drawable/from_to_purple"
-            android:backgroundTint="@color/azul_bahamas" />
+            android:backgroundTint="@color/principal_color" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +67,7 @@
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:singleLine="true"
-            android:text="Pedido Nº 8"
+            android:text="Resgate Nº 8"
             android:textColor="@android:color/black"
             android:textSize="12sp" />
 

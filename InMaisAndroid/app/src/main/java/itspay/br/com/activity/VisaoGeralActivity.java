@@ -3,6 +3,7 @@ package itspay.br.com.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import itspay.br.com.itspay.R;
@@ -11,10 +12,10 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
 
 //    private BoomMenuButton bmb;
     private TextView txtAtualizarCadastro;
-    private TextView txtVerExtratoSaldo;
-    private TextView txtVerExtratoCreditos;
-    private TextView txtPontosVencer;
-    private TextView txtVerExtratoResgate;
+    private LinearLayout linearExtratoSaldo;
+    private LinearLayout linearUltimosResgates;
+    private LinearLayout linearUltimosCreditos;
+    private LinearLayout linearPontosVencer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +24,10 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
 //        posServico();
 
         txtAtualizarCadastro = (TextView) findViewById(R.id.tx_atualizar_castro);
-        txtVerExtratoSaldo = (TextView) findViewById(R.id.txt_ver_extrato_saldo);
-        txtVerExtratoCreditos = (TextView) findViewById(R.id.txt_ver_extrato_creditos);
-        txtPontosVencer = (TextView) findViewById(R.id.txt_ver_pontos_vencer);
-        txtVerExtratoResgate = (TextView) findViewById(R.id.txt_ver_resgate);
+        linearExtratoSaldo = (LinearLayout) findViewById(R.id.linear_extrato_saldo);
+        linearUltimosCreditos = (LinearLayout) findViewById(R.id.linear_ultimos_creditos);
+        linearPontosVencer = (LinearLayout) findViewById(R.id.linear_pontos_vencer);
+        linearUltimosResgates = (LinearLayout) findViewById(R.id.linear_ultimos_resgates);
 
 
         txtAtualizarCadastro.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +38,15 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
             }
         });
 
-        txtVerExtratoSaldo.setOnClickListener(new View.OnClickListener() {
+//        txtVerExtratoSaldo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        linearExtratoSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
@@ -45,7 +54,7 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
             }
         });
 
-        txtVerExtratoCreditos.setOnClickListener(new View.OnClickListener() {
+        linearUltimosCreditos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
@@ -53,7 +62,7 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
             }
         });
 
-        txtPontosVencer.setOnClickListener(new View.OnClickListener() {
+        linearPontosVencer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CartaoActivity.class);
@@ -61,7 +70,7 @@ public class VisaoGeralActivity extends BaseDrawerActivity {
             }
         });
 
-        txtVerExtratoResgate.setOnClickListener(new View.OnClickListener() {
+        linearUltimosResgates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ResgateActivity.class);

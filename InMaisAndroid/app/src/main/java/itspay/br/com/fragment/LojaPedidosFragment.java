@@ -146,9 +146,9 @@ public class LojaPedidosFragment extends Fragment {
         TextView endereco2 = (TextView) view.findViewById(R.id.text_endereco_entrega2);
         TextView quantidadeParcelas = (TextView) view.findViewById(R.id.text_qtde_parcelas);
         TextView valorParcela = (TextView) view.findViewById(R.id.text_valor_parcela);
-        TextView valorTotalInferior = (TextView) view.findViewById(R.id.text_inferior_valor_total);
+        TextView valorTotalInferior = (TextView) view.findViewById(R.id.text_taxas);
         TextView ultimos4Digitos = (TextView) view.findViewById(R.id.text_ultimos_4_digitos);
-        TextView nomeImpresso = (TextView) view.findViewById(R.id.text_nome_impresso);
+        TextView nomeImpresso = (TextView) view.findViewById(R.id.text_pontos);
         TextView button_status_pedido = (TextView) view.findViewById(R.id.btn_status_pedido);
 
         nomeParceiro.setText(pedidoDetalhe.getNomeParceiro());

@@ -139,34 +139,6 @@ public class CartaoActivity extends AppCompatActivity {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 // }else{
 //            BuilderManagerFloatingButton.imageResourceIndex = 0;
 //            BuilderManagerFloatingButton.imageResources = new int[]{

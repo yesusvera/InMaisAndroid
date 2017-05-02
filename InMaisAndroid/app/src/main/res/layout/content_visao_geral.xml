@@ -237,6 +237,7 @@
                 android:padding="8dp">
 
                 <LinearLayout
+                    android:id="@+id/linear_extrato_saldo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -247,20 +248,20 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Seu Saldo Atual"
-                        android:textColor="@color/bgContentTop"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt_ver_extrato_saldo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Ver Extrato"
                         android:textColor="@color/principal_color"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_ver_extrato_saldo"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="Ver Extrato"-->
+                        <!--android:textColor="@color/principal_color"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:textStyle="bold" />-->
 
 
                 </LinearLayout>
@@ -310,6 +311,7 @@
                 android:padding="8dp">
 
                 <LinearLayout
+                    android:id="@+id/linear_ultimos_creditos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -320,20 +322,20 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/prompt_ultimos_creditos"
-                        android:textColor="@color/bgContentTop"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt_ver_extrato_creditos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Ver Extrato"
                         android:textColor="@color/principal_color"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_ver_extrato_creditos"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="Ver Extrato"-->
+                        <!--android:textColor="@color/principal_color"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:textStyle="bold" />-->
 
 
                 </LinearLayout>
@@ -442,6 +444,7 @@
                 android:padding="8dp">
 
                 <LinearLayout
+                    android:id="@+id/linear_pontos_vencer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -451,20 +454,20 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Próximos Pontos a Vencer"
-                        android:textColor="@color/bgContentTop"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt_ver_pontos_vencer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Ver Todos"
                         android:textColor="@color/principal_color"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_ver_pontos_vencer"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="Ver Todos"-->
+                        <!--android:textColor="@color/principal_color"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:textStyle="bold" />-->
 
                 </LinearLayout>
 
@@ -496,6 +499,7 @@
                 android:layout_height="10dp" />
 
             <LinearLayout
+                android:id="@+id/linear_ultimos_resgates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -513,20 +517,20 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/prompt_ultimos_resgates"
-                        android:textColor="@color/bgContentTop"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/txt_ver_resgate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="Resgatar"
                         android:textColor="@color/principal_color"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/txt_ver_resgate"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="Resgatar"-->
+                        <!--android:textColor="@color/principal_color"-->
+                        <!--android:textSize="18sp"-->
+                        <!--android:textStyle="bold" />-->
 
                 </LinearLayout>
 

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TabHost;
 
 import com.ramotion.foldingcell.FoldingCell;
 
@@ -16,13 +17,16 @@ import java.util.List;
 import itspay.br.com.adapter.FoldingCellPedidosAdapter;
 import itspay.br.com.controller.PedidoDetalheController;
 import itspay.br.com.itspay.R;
+import itspay.br.com.model.Credencial;
 import itspay.br.com.model.Pedido;
 
 
 public class PedidoDetalheActivity extends AppCompatActivity {
 
     private OnFragmentInteractionListener mListener;
-
+    private TabHost host;
+    private String periodo = "15";
+    public static Credencial credencialDetalhe;
     public SwipeRefreshLayout swipeRefreshLayout;
     private PedidoDetalheController controller;
 
@@ -36,19 +40,72 @@ public class PedidoDetalheActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedido_detalhe);
 
+        posServico();
+
         controller = new PedidoDetalheController(this);
 
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
-//
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
+//        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+////
+//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
 //                controller.objectList();
-            }
-        });
+//            }
+//        });
 
 
         configurarPedidos(controller.objectList());
+    }
+
+    public void posServico(){
+
+
+        host = (TabHost)findViewById(R.id.tabhost);
+        host.setup();
+
+        configureTabs();
+//
+//        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
+////
+//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                controller.objectList();
+//            }
+//        });
+
+    }
+
+    public void configureTabs(){
+        //Tab 1
+        TabHost.TabSpec spec = host.newTabSpec("30");
+        spec.setContent(R.id.tab1);
+        spec.setIndicator("30 Dias");
+        host.addTab(spec);
+
+        //Tab 2
+        spec = host.newTabSpec("60");
+        spec.setContent(R.id.tab2);
+        spec.setIndicator("60 Dias");
+        host.addTab(spec);
+
+        //Tab 3
+        spec = host.newTabSpec("90");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("90 Dias");
+        host.addTab(spec);
+
+        host.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+            @Override
+            public void onTabChanged(String s) {
+                setPeriodo(s);
+                controller.objectList();
+            }
+        });
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
     }
 
 

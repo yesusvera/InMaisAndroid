@@ -115,7 +115,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.PedidoDetalheActivity"
-            android:label="Detalhes do Pedido"
+            android:label="Acompanhar Resgate"
             android:theme="@style/TemaFormularios"
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
