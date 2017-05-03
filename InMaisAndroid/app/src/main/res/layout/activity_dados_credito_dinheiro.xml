@@ -24,8 +24,7 @@
                 android:paddingTop="10dp"
                 android:text="Selecione o cartão:"
                 android:textColor="@color/txt_color_black"
-                android:textSize="14dp"
-                android:textStyle="bold" />
+                android:textSize="14dp" />
 
             <Spinner
                 android:id="@+id/sp_pre_pago"
@@ -42,8 +41,7 @@
                 android:text="Seu saldo total de pontos:"
                 android:paddingBottom="5dp"
                 android:textColor="@color/txt_color_black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,8 +51,7 @@
                 android:text="0"
                 android:paddingBottom="5dp"
                 android:textColor="@color/grey_title"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -64,19 +61,17 @@
                 android:text="Taxa em pontos para crédito em celular:"
                 android:paddingBottom="5dp"
                 android:textColor="@color/txt_color_black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:paddingLeft="4dp"
-                android:text="350"
+                android:text="0"
                 android:paddingBottom="5dp"
                 android:textColor="@color/grey_title"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -86,19 +81,17 @@
                 android:text="Pontos disponíveis para resgate:"
                 android:paddingBottom="5dp"
                 android:textColor="@color/txt_color_black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:paddingLeft="4dp"
-                android:text="-.350"
+                android:text="0"
                 android:paddingBottom="5dp"
                 android:textColor="@color/grey_title"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -119,14 +112,17 @@
 
             <Button
                 android:id="@+id/btn_calcular"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:background="@drawable/back_buton_in_app"
                 android:text="Calcular"
+                android:padding="16dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/bgContent"
                 android:layout_marginBottom="16dp"/>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -136,8 +132,7 @@
                 android:text="Total de pontos a resgatar:"
                 android:paddingBottom="5dp"
                 android:textColor="@color/txt_color_black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -147,8 +142,7 @@
                 android:text="Valor total a ser creditado no cartão:"
                 android:paddingBottom="5dp"
                 android:textColor="@color/txt_color_black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
 
             <Button
                 android:id="@+id/btn_confirmar"
