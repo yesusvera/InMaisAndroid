@@ -162,38 +162,47 @@
          <activity
              android:name="itspay.br.com.activity.VisaoGeralActivity"
              android:label="@string/title_activity_visao_geral"
+             android:windowSoftInputMode="stateHidden|adjustPan"
              android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.CadastroCliente1Activity"
             android:label="@string/title_activity_cadastro_cliente1"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.CadastroEnderecoAcitvity"
             android:label="@string/title_activity_cadastro_endereco_acitvity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.DadosParaContatoActivity"
             android:label="@string/title_activity_dados_para_contato"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.FaleConoscoActivity"
             android:label="@string/title_fale_conosco"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.ExtratoActivity"
             android:label="@string/title_activity_extrato"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.AlterarDadosPessoaisActivity"
             android:label="@string/title_dados_pessoais"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosParaCreditoActivity"
             android:label="@string/title_dados_para_credito"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosBancariosActivity"
             android:label="@string/title_activity_dados_bancarios"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.ConhecaInMaisActivity"
@@ -202,34 +211,42 @@
         <activity
             android:name="itspay.br.com.activity.ResgateActivity"
             android:label="@string/title_activity_resgate"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCinemaProdutoActivity"
             android:label="Dados Resgate Cinema e Produtos"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCartaoPrePagoActivity"
             android:label="Solicitação Cartão Pré-Pago"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCreditoCartaoPrePagoActivity"
             android:label="Crédito em Dinheiro"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCreditoContaActivity"
             android:label="Crédito em Conta"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateRecargaCelularActivity"
             android:label="Recarga Celular"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.PontosVencerActivity"
             android:label="Pontos a Vencer"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.UltimosLancamentosActivity"
             android:label="Últimos Lançamentos"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios"/>
     </application>
 
