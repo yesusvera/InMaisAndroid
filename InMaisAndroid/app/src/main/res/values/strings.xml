@@ -158,6 +158,25 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="confirmacao_ir_editar_cadastro">Deseja editar seu cadastro?</string>
     <string name="confirmacao_ir_saldo_extrato">Deseja visualizar seu extrato completo?</string>
     <string name="confirmacao_ir_ultimos_resgates">Deseja visualizar seus resgates?</string>
+    <string name="confirmacao_ir_recarga_celular">Deseja ir para tela de recarga de celular?</string>
+
+    <string name="voucher_americanas">Americanas - Crédito Voucher</string>
+    <string name="voucher_cinemark">CINEMARK - Par de Ingresso - Supersaver Padrão</string>
+    <string name="voucher_cinemark_padrao">CINEMARK - Supersaver Padrão</string>
+    <string name="voucher_shoptime">Shoptime - Crédito Voucher</string>
+    <string name="voucher_submarino">Submarino - Crédito Voucher</string>
+
+    <string name="cartao_banpara">Cartão Pré-Pago Banpará</string>
+    <string name="carta_visa">Cartão Pré-Pago VISA</string>
+    <string name="cartao_cabal">Cartão Pré-Pago CABAL</string>
+
+
+    <string name="recarga_claro">Recarga Claro</string>
+    <string name="recarga_nextel">Recarga Nextel</string>
+    <string name="recarga_vivo">Recarga Vivo</string>
+    <string name="recarga_oi">Recarga Oi</string>
+    <string name="recarga_tim">Recarga Tim</string>
+
 
     <string-array name="planets">
         <item>Mercury</item>

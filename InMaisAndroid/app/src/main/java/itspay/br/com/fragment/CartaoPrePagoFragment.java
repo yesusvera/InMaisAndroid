@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import itspay.br.com.activity.DadosResgateCartaoPrePagoActivity;
 import itspay.br.com.itspay.R;
@@ -16,30 +16,21 @@ public class CartaoPrePagoFragment extends Fragment {
 
     private View mView;
 //    private Button btnConfirmar;
-    private ImageView imgBanpara;
-    private ImageView imgCabal;
-    private ImageView imgVisa;
+    private LinearLayout llBanpara;
+    private LinearLayout llCabal;
+    private LinearLayout llVisa;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_cartao_pre_pago, container, false);
-//        btnConfirmar = (Button) mView.findViewById(R.id.btn_confirmar);
-        imgBanpara = (ImageView) mView.findViewById(R.id.img_banpara);
-        imgCabal = (ImageView) mView.findViewById(R.id.img_cabal);
-        imgVisa = (ImageView) mView.findViewById(R.id.img_visa);
+        llBanpara = (LinearLayout) mView.findViewById(R.id.linear_banpara);
+        llCabal = (LinearLayout) mView.findViewById(R.id.linear_cabal);
+        llVisa = (LinearLayout) mView.findViewById(R.id.linear_visa);
 
-//
-//        btnConfirmar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), DadosResgateCartaoPrePagoActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
-        imgBanpara.setOnClickListener(new View.OnClickListener() {
+        llBanpara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCartaoPrePagoActivity.class);
@@ -47,7 +38,7 @@ public class CartaoPrePagoFragment extends Fragment {
             }
         });
 
-        imgCabal.setOnClickListener(new View.OnClickListener() {
+        llCabal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCartaoPrePagoActivity.class);
@@ -55,7 +46,7 @@ public class CartaoPrePagoFragment extends Fragment {
             }
         });
 
-        imgVisa.setOnClickListener(new View.OnClickListener() {
+        llVisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCartaoPrePagoActivity.class);

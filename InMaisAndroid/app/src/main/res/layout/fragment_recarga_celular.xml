@@ -4,239 +4,127 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="itspay.br.com.fragment.CreditoDinheiroFragment">
+    tools:context="itspay.br.com.fragment.RecargaCelularFragment">
 
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linear_claro"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/img_claro"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/claro" />
+
+        <TextView
+            android:id="@+id/txt_claro"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:id="@+id/ll_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="13dp"
-                android:layout_marginStart="13dp"
-                android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/recarga_claro"
+            android:textStyle="bold" />
 
-                <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="38dp"
-                    android:layout_marginStart="38dp"
-                    android:background="@drawable/icone_celular"
-                    android:gravity="center" />
+    </LinearLayout>
 
-                <TextView
-                    android:id="@+id/txt_recarga"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingTop="@dimen/margin_10dp"
-                    android:text="Recarga de Celular"
-                    android:textAllCaps="true"
-                    android:textSize="@dimen/abc_text_size_14dp"
-                    android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/linear_nextel"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_nextel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/nextel" />
+
+        <TextView
+            android:id="@+id/txt_nextel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/recarga_nextel"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 
-            </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear_oi"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/img_oi"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/oi" />
 
-                <ImageView
-                    android:id="@+id/img_claro"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/claro" />
+        <TextView
+            android:id="@+id/txt_oi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/recarga_oi"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/txt_claro"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Recarga Claro"
-                    android:textStyle="bold"
-                    android:layout_alignLeft="@+id/img_claro"
-                    android:layout_alignStart="@+id/img_claro"
-                    android:layout_marginLeft="64dp"
-                    android:layout_marginStart="64dp"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linear_tim"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/img_tim"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/tim" />
 
+        <TextView
+            android:id="@+id/txt_tim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/recarga_tim"
+            android:textStyle="bold" />
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <ImageView
-                    android:id="@+id/img_nextel"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/nextel" />
-
-                <TextView
-                    android:id="@+id/txt_nextel"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Recarga Nextel"
-                    android:textStyle="bold"
-                    android:layout_alignLeft="@+id/img_nextel"
-                    android:layout_alignStart="@+id/img_nextel"
-                    android:layout_marginLeft="64dp"
-                    android:layout_marginStart="64dp"/>
+    </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linear_vivo"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/img_vivo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/vivo" />
 
-            </RelativeLayout>
+        <TextView
+            android:id="@+id/txt_vivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/recarga_vivo"
+            android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+    </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/img_oi"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/oi" />
-
-                <TextView
-                    android:id="@+id/txt_oi"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Recarga Oi"
-                    android:textStyle="bold"
-                    android:layout_alignLeft="@+id/img_oi"
-                    android:layout_alignStart="@+id/img_oi"
-                    android:layout_marginLeft="64dp"
-                    android:layout_marginStart="64dp"/>
-
-
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <ImageView
-                    android:id="@+id/img_tim"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/tim" />
-
-                <TextView
-                    android:id="@+id/txt_tim"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Recarga Tim"
-                    android:textStyle="bold"
-                    android:layout_alignLeft="@+id/img_tim"
-                    android:layout_alignStart="@+id/img_tim"
-                    android:layout_marginLeft="64dp"
-                    android:layout_marginStart="64dp"/>
-
-
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <ImageView
-                    android:id="@+id/img_vivo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/vivo" />
-
-                <TextView
-                    android:id="@+id/txt_vivo"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Recarga Vivo"
-                    android:textStyle="bold"
-                    android:layout_alignLeft="@+id/img_vivo"
-                    android:layout_alignStart="@+id/img_vivo"
-                    android:layout_marginLeft="64dp"
-                    android:layout_marginStart="64dp"/>
-
-
-
-
-            </RelativeLayout>
-
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:paddingTop="8dp">-->
-
-                <!--<Button-->
-                    <!--android:id="@+id/btn_confirmar"-->
-                    <!--style="?android:textAppearanceSmall"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:background="@drawable/back_buton_in_app"-->
-                    <!--android:text="Confirmar"-->
-                    <!--android:textColor="@android:color/background_light"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_alignParentBottom="true"-->
-                    <!--android:layout_alignParentLeft="true"-->
-                    <!--android:layout_alignParentStart="true"-->
-                    <!--android:layout_marginBottom="40dp" />-->
-
-            <!--</LinearLayout>-->
-
-        </LinearLayout>
-
-    </ScrollView>
 
 
 </LinearLayout>

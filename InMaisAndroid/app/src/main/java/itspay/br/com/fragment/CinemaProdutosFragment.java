@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import itspay.br.com.activity.DadosResgateCinemaProdutoActivity;
 import itspay.br.com.itspay.R;
@@ -18,11 +18,11 @@ public class CinemaProdutosFragment extends Fragment {
 
     private View mView;
 //    private Button btnConfirmar;
-    private ImageView imgAmericanas;
-    private ImageView imgCinemark;
-    private ImageView imgCinemarkPadrao;
-    private ImageView imgShoptime;
-    private ImageView imgSubmarino;
+    private LinearLayout llAmericanas;
+    private LinearLayout llCinemark;
+    private LinearLayout llCinemarkPadrao;
+    private LinearLayout llShoptime;
+    private LinearLayout llSubmarino;
 
 
     @Override
@@ -31,11 +31,11 @@ public class CinemaProdutosFragment extends Fragment {
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_cinema_produtos, container, false);
 //        btnConfirmar = (Button) mView.findViewById(R.id.btn_confirmar);
-        imgAmericanas = (ImageView) mView.findViewById(R.id.img_americanas);
-        imgCinemark = (ImageView) mView.findViewById(R.id.img_cinemark);
-        imgCinemarkPadrao = (ImageView) mView.findViewById(R.id.img_cinemark_padrao);
-        imgShoptime = (ImageView) mView.findViewById(R.id.img_shoptime);
-        imgSubmarino = (ImageView) mView.findViewById(R.id.img_submarino);
+        llAmericanas = (LinearLayout) mView.findViewById(R.id.linear_americanas);
+        llCinemark = (LinearLayout) mView.findViewById(R.id.linear_cinemark);
+        llCinemarkPadrao = (LinearLayout) mView.findViewById(R.id.linear_cinemark_padrao);
+        llShoptime = (LinearLayout) mView.findViewById(R.id.linear_shoptime);
+        llSubmarino = (LinearLayout) mView.findViewById(R.id.linear_submarino);
 
 
 
@@ -48,7 +48,7 @@ public class CinemaProdutosFragment extends Fragment {
 //            }
 //        });
 
-        imgAmericanas.setOnClickListener(new View.OnClickListener() {
+        llAmericanas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCinemaProdutoActivity.class);
@@ -56,7 +56,7 @@ public class CinemaProdutosFragment extends Fragment {
             }
         });
 
-        imgCinemark.setOnClickListener(new View.OnClickListener() {
+        llCinemark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCinemaProdutoActivity.class);
@@ -64,7 +64,7 @@ public class CinemaProdutosFragment extends Fragment {
             }
         });
 
-        imgCinemarkPadrao.setOnClickListener(new View.OnClickListener() {
+        llCinemarkPadrao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCinemaProdutoActivity.class);
@@ -72,7 +72,7 @@ public class CinemaProdutosFragment extends Fragment {
             }
         });
 
-        imgShoptime.setOnClickListener(new View.OnClickListener() {
+        llShoptime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCinemaProdutoActivity.class);
@@ -80,7 +80,7 @@ public class CinemaProdutosFragment extends Fragment {
             }
         });
 
-        imgSubmarino.setOnClickListener(new View.OnClickListener() {
+        llSubmarino.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCinemaProdutoActivity.class);

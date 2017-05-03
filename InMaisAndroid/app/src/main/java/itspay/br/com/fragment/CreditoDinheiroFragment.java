@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import itspay.br.com.activity.DadosResgateCreditoCartaoPrePagoActivity;
 import itspay.br.com.activity.DadosResgateCreditoContaActivity;
@@ -16,18 +17,21 @@ import itspay.br.com.itspay.R;
 public class CreditoDinheiroFragment extends Fragment {
 
     private View mView;
-    private ImageView imgCaixa;
-    private ImageView imgCarteira;
+    private LinearLayout llCaixa;
+    private LinearLayout llCarteira;
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_credito_dinheiro, container, false);
-        imgCaixa = (ImageView) mView.findViewById(R.id.img_caixa);
-        imgCarteira = (ImageView) mView.findViewById(R.id.img_carteira);
+        llCaixa = (LinearLayout) mView.findViewById(R.id.linear_caixa);
+        llCarteira = (LinearLayout) mView.findViewById(R.id.linear_carteira);
 
-        imgCaixa.setOnClickListener(new View.OnClickListener() {
+        llCaixa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCreditoCartaoPrePagoActivity.class);
@@ -35,7 +39,7 @@ public class CreditoDinheiroFragment extends Fragment {
             }
         });
 
-        imgCarteira.setOnClickListener(new View.OnClickListener() {
+        llCarteira.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateCreditoContaActivity.class);

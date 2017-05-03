@@ -160,9 +160,9 @@
             android:theme="@style/TemaFormularios"
             android:windowSoftInputMode="stateHidden|adjustPan" />
          <activity
-         android:name="itspay.br.com.activity.VisaoGeralActivity"
-         android:label="@string/title_activity_visao_geral"
-         android:theme="@style/AppTheme" />
+             android:name="itspay.br.com.activity.VisaoGeralActivity"
+             android:label="@string/title_activity_visao_geral"
+             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.CadastroCliente1Activity"
             android:label="@string/title_activity_cadastro_cliente1"

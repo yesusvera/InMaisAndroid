@@ -8,6 +8,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linear_caixa"
         android:layout_marginTop="130dp"
         android:layout_marginLeft="15dp"
         android:gravity="center_vertical"
@@ -26,13 +27,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="Resgate de Crédito em Conta"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
 
     <LinearLayout
+        android:id="@+id/linear_carteira"
         android:layout_marginLeft="15dp"
         android:gravity="center_vertical"
         android:layout_width="match_parent"

@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import itspay.br.com.activity.DadosResgateRecargaCelularActivity;
 import itspay.br.com.itspay.R;
@@ -18,34 +18,55 @@ public class RecargaCelularFragment extends Fragment {
 
     private View mView;
 //    private Button btnConfirmar;
-    private ImageView imgClaro;
-    private ImageView imgNextel;
-    private ImageView imgOi;
-    private ImageView imgTim;
-    private ImageView imgVivo;
+    private LinearLayout llClaro;
+    private LinearLayout llNextel;
+    private LinearLayout llOi;
+    private LinearLayout llTim;
+    private LinearLayout llVivo;
+
+//    View.OnClickListener irRecargaCelular = new View.OnClickListener()
+//
+//    {
+//        @Override
+//        public void onClick(View v) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(RecargaCelularFragment.this);
+//            builder.setMessage(getString(R.string.confirmacao_ir_saldo_extrato))
+//                    .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
+//                            startActivity(intent);
+//                        }
+//                    })
+//                    .setNegativeButton("Não", null);
+//            builder.create().show();
+//
+//        }
+//    };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mView = inflater.inflate(R.layout.fragment_recarga_celular, container, false);
-//        btnConfirmar = (Button) mView.findViewById(R.id.btn_confirmar);
-        imgClaro = (ImageView) mView.findViewById(R.id.img_claro);
-        imgNextel = (ImageView) mView.findViewById(R.id.img_nextel);
-        imgOi = (ImageView) mView.findViewById(R.id.img_oi);
-        imgTim = (ImageView) mView.findViewById(R.id.img_tim);
-        imgVivo = (ImageView) mView.findViewById(R.id.img_vivo);
+        llClaro = (LinearLayout) mView.findViewById(R.id.linear_claro);
+        llNextel = (LinearLayout) mView.findViewById(R.id.linear_nextel);
+        llOi = (LinearLayout) mView.findViewById(R.id.linear_oi);
+        llTim = (LinearLayout) mView.findViewById(R.id.linear_tim);
+        llVivo = (LinearLayout) mView.findViewById(R.id.linear_vivo);
 
-//
-//        btnConfirmar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
-        imgClaro.setOnClickListener(new View.OnClickListener() {
+        llClaro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        llNextel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
@@ -53,7 +74,7 @@ public class RecargaCelularFragment extends Fragment {
             }
         });
 
-        imgNextel.setOnClickListener(new View.OnClickListener() {
+        llOi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
@@ -61,7 +82,7 @@ public class RecargaCelularFragment extends Fragment {
             }
         });
 
-        imgOi.setOnClickListener(new View.OnClickListener() {
+        llTim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
@@ -69,15 +90,7 @@ public class RecargaCelularFragment extends Fragment {
             }
         });
 
-        imgTim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        imgVivo.setOnClickListener(new View.OnClickListener() {
+        llVivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), DadosResgateRecargaCelularActivity.class);
