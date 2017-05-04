@@ -215,7 +215,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCinemaProdutoActivity"
-            android:label="Dados Resgate Cinema e Produtos"
+            android:label="Resgate Cinema e Produtos"
             android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
@@ -225,12 +225,12 @@
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCreditoCartaoPrePagoActivity"
-            android:label="Crédito em Dinheiro"
+            android:label="Resgate de Crédito em Cartão Pré-Pago"
             android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity
             android:name="itspay.br.com.activity.DadosResgateCreditoContaActivity"
-            android:label="Crédito em Conta"
+            android:label="Resgate de Crédito em Conta"
             android:windowSoftInputMode="stateHidden|adjustPan"
             android:theme="@style/TemaFormularios" />
         <activity

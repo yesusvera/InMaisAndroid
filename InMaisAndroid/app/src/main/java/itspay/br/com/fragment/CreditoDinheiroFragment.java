@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import itspay.br.com.activity.DadosResgateCreditoCartaoPrePagoActivity;
@@ -34,7 +33,7 @@ public class CreditoDinheiroFragment extends Fragment {
         llCaixa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DadosResgateCreditoCartaoPrePagoActivity.class);
+                Intent intent = new Intent(getContext(), DadosResgateCreditoContaActivity .class);
                 startActivity(intent);
             }
         });
@@ -42,7 +41,7 @@ public class CreditoDinheiroFragment extends Fragment {
         llCarteira.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), DadosResgateCreditoContaActivity.class);
+                Intent intent = new Intent(getContext(), DadosResgateCreditoCartaoPrePagoActivity.class);
                 startActivity(intent);
             }
         });

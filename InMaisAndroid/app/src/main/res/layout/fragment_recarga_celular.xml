@@ -30,6 +30,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/claro" />
 
+
                 <TextView
                     android:id="@+id/txt_claro"
                     android:layout_width="match_parent"
@@ -37,6 +38,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="@string/recarga_claro"
                     android:textStyle="bold" />
+
 
             </LinearLayout>
 
@@ -69,6 +71,13 @@
                     android:text="@string/recarga_nextel"
                     android:textStyle="bold" />
 
+                <Spinner
+                    android:id="@+id/sp_claro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawSelectorOnTop="true" />
+
             </LinearLayout>
 
             <ImageView
@@ -84,8 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical">
+                android:layout_marginTop="20dp">
 
                 <ImageView
                     android:id="@+id/img_oi"
@@ -93,13 +101,22 @@
                     android:layout_height="50dp"
                     android:background="@drawable/oi" />
 
-                <TextView
-                    android:id="@+id/txt_oi"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="@string/recarga_oi"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_oi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/recarga_oi"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
 

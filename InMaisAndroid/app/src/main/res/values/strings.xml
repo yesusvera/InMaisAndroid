@@ -258,6 +258,54 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     </string-array>
 
 
+    <string-array name="list_conta">
+        <item>Corrente</item>
+        <item>Poupança</item>
+    </string-array>
+
+    <string-array name="list_claro">
+        <item>Selecione</item>
+        <item>3.000 ponto(s) -> R$30</item>
+        <item>5.000 ponto(s) -> R$50</item>
+        <item>1.000 ponto(s) -> R$10</item>
+    </string-array>
+
+    <string-array name="list_nextel">
+        <item>Selecione</item>
+        <item>2.000 ponto(s) -> R$20</item>
+        <item>3.000 ponto(s) -> R$30</item>
+        <item>5.000 ponto(s) -> R$50</item>
+    </string-array>
+
+    <string-array name="list_oi">
+        <item>Selecione</item>
+        <item>1.000 ponto(s) -> R$10</item>
+        <item>3.000 ponto(s) -> R$30</item>
+        <item>10.000 ponto(s) -> R$100</item>
+    </string-array>
+
+    <string-array name="list_tim">
+        <item>Selecione</item>
+        <item>3.500 ponto(s) -> R$35</item>
+        <item>5.000 ponto(s) -> R$50</item>
+        <item>10.000 ponto(s) -> R$100</item>
+        <item>1.000 ponto(s) -> R$10</item>
+    </string-array>
+
+    <string-array name="list_vivo">
+        <item>Selecione</item>
+        <item>1.000 ponto(s) -> R$10</item>
+        <item>3.500 ponto(s) -> R$35</item>
+        <item>10.000 ponto(s) -> R$100</item>
+    </string-array>
+
+    <string-array name="list_cartao">
+        <item>Selecione</item>
+        <item>800 ponto(s) -> 1 Cartão</item>
+    </string-array>
+
+
+
     <string-array name="list_estado_civil">
         <item>Solteiro(a)</item>
         <item>Casado(a)</item>
