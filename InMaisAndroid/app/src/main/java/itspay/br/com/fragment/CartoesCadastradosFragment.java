@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class CartoesCadastradosFragment extends Fragment {
     TextView mtvErroListaVazia;
     List<CartaoCadastrado> mList;
     RecyclerView mRvCartoes;
-//    Button btnSalvar;
+    Button btnSalvar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +32,7 @@ public class CartoesCadastradosFragment extends Fragment {
 
         mtvErroListaVazia = (TextView)mView.findViewById(R.id.tv_erro_lista_vazia);
         mRvCartoes = (RecyclerView)mView.findViewById(R.id.rv_cartoes_cadastrados);
-//        btnSalvar.findViewById(R.id.trocar_email_button);
+        btnSalvar = (Button) mView.findViewById(R.id.trocar_email_button);
 
         if(mList == null){
             mtvErroListaVazia.setVisibility(View.VISIBLE);
@@ -46,14 +47,14 @@ public class CartoesCadastradosFragment extends Fragment {
         }
 
 //        btnSalvar.findViewById(R.id.trocar_email_button);
-//        btnSalvar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), DadosBancariosActivity.class);
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getContext(), CartaoPrePagoFragment.class);
 //                startActivity(intent);
-//
-//            }
-//        });
+
+            }
+        });
 
 
         return mView;
