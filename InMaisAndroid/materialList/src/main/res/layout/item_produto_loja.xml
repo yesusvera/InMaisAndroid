@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MainLayout"
-    android:background="#00273f"
+    android:background="@color/principal_color"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 

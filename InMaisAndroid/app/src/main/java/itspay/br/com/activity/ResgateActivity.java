@@ -1,6 +1,5 @@
 package itspay.br.com.activity;
 
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -43,6 +42,11 @@ public class ResgateActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
+
+
+
+        int mPosition = getIntent().getIntExtra("idTab",0);
+
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -80,6 +84,8 @@ public class ResgateActivity extends AppCompatActivity {
                 View.GONE,
                 getResources().getString(R.string.titulo_tab_cartao)
         );
+
+        mViewPager.setCurrentItem(mPosition);
     }
 
 
@@ -100,10 +106,11 @@ public class ResgateActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        Drawable myDrawable;
+
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+
         }
 
         @Override

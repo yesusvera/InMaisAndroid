@@ -72,6 +72,8 @@ public class BaseController extends BaseActivityController<BaseDrawerActivity>{
 
     }
 
+
+
     public void logout(){
         AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setCancelable(false).setTitle("ItsPay").setMessage("Tem certeza que deseja sair?")

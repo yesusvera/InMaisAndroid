@@ -1,5 +1,6 @@
 package itspay.br.com.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import itspay.br.com.activity.ResgateActivity;
 import itspay.br.com.itspay.R;
 import itspay.br.com.model.CartaoCadastrado;
 
@@ -50,8 +52,9 @@ public class CartoesCadastradosFragment extends Fragment {
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), CartaoPrePagoFragment.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getContext(), ResgateActivity.class);
+                intent.putExtra("idTab",3);
+                startActivity(intent);
 
             }
         });

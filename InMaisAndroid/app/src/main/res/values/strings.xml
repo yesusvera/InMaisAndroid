@@ -422,6 +422,7 @@ Li e concordo com as regras de cartão Pré-Pago e Crédito em Conta</string>
     <string name="error_lists_vazia">Nenhum registro encontrado</string>
     <string name="title_activity_dados_bancarios">Dados Bancários</string>
     <string name="title_activity_conheca_in_mais">Conheça o InMais</string>
+    <string name="title_activity_troca_pontos">O In Mais é o programa de fidelidade onde você acumula pontos para trocar por:</string>
     <string name="title_activity_resgate">Resgate</string>
 
     <!-- <string name="info_email">sac@financialcartoes.com.br</string> -->
