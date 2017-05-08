@@ -104,8 +104,10 @@ public class BaseDrawerActivity extends AppCompatActivity implements NavigationV
         //} else if (id == R.id.nav_trocar_senha) {
         //    meusCartoesController.abrirTrocarSenha();
         if (id == R.id.nav_visão_geral) {
-            Intent intent = new Intent(this, VisaoGeralActivity.class);
-            startActivity(intent);
+            if(!BaseDrawerActivity.this.getClass().getCanonicalName().equals(VisaoGeralActivity.class.getCanonicalName())) {
+                Intent intent = new Intent(this, VisaoGeralActivity.class);
+                startActivity(intent);
+            }
         } else if (id == R.id.nav_extrato) {
             Intent intent = new Intent(this, CartaoActivity.class);
             startActivity(intent);
