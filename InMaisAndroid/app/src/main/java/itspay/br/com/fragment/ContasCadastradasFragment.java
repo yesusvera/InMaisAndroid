@@ -41,9 +41,9 @@ public class ContasCadastradasFragment extends Fragment {
 
         List<ContaBancaria> contasBancarias= new ArrayList<ContaBancaria>();
 
-        ContaBancaria conta1 = new ContaBancaria("Banco do Brasil", "1239-4","54.125-4");
-        ContaBancaria conta2 = new ContaBancaria("Caixa Economica", "1239-4","54.135-4");
-        ContaBancaria conta3 = new ContaBancaria("Santander", "2013","0011245-6");
+        ContaBancaria conta1 = new ContaBancaria("Banco do Brasil", "   1239-4"," 54.125-4");
+        ContaBancaria conta2 = new ContaBancaria("Caixa Economica", "1239-4"," 54.135-4");
+        ContaBancaria conta3 = new ContaBancaria("Santander      ", "      2013","0011245-6");
 
         contasBancarias.add(conta1);
         contasBancarias.add(conta2);
