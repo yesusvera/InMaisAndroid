@@ -34,7 +34,7 @@ public class ContasCadastradasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         mView = inflater.inflate(R.layout.fragment_contas_cadastradas, container, false);
+        mView = inflater.inflate(R.layout.fragment_contas_cadastradas, container, false);
         mRvContas = (RecyclerView)mView.findViewById(R.id.rv_contas_bancarias);
         mtvErroListaVazia = (TextView)mView.findViewById(R.id.tv_erro_lista_vazia);
         btnSalvar = (Button)mView.findViewById(R.id.trocar_email_button);
